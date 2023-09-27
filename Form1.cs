@@ -64,17 +64,25 @@ namespace vlute_course_manager
         private void frmLoginButton_Click(object sender, EventArgs e)
         {
             // Username check
-            this.emptyValidateTextBox(
+            bool validateUsernameResult = emptyValidateTextBox(
                 frmUsernameAlert,
                 frmUsernameTextBox.Text,
-                this.EMPTY_USERNAME_ALERT
+                EMPTY_USERNAME_ALERT
             );
             // Validate check
-            this.emptyValidateTextBox(
+            bool validatePasswordResult = emptyValidateTextBox(
                 frmPasswordAlert,
                 frmPasswordTextBox.Text,
-                this.EMPTY_PASSWORD_ALERT
+                EMPTY_PASSWORD_ALERT
             );
+
+            if (validateUsernameResult && validatePasswordResult)
+            {
+                Hide();
+
+                Home HomeForm = new Home();
+                HomeForm.Show();
+            }
         }
     }
 }

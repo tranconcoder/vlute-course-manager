@@ -56,7 +56,7 @@
             this.label1.Font = new System.Drawing.Font("Inter", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(59)))), ((int)(((byte)(80)))));
             this.label1.Location = new System.Drawing.Point(979, 137);
-            this.label1.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(442, 44);
             this.label1.TabIndex = 3;
@@ -69,6 +69,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.frmUsernameTextBox);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(950, 299);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(500, 135);
             this.guna2CustomGradientPanel1.TabIndex = 5;
@@ -78,7 +79,8 @@
             this.frmUsernameAlert.BackColor = System.Drawing.Color.Transparent;
             this.frmUsernameAlert.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmUsernameAlert.ForeColor = System.Drawing.Color.Red;
-            this.frmUsernameAlert.Location = new System.Drawing.Point(1, 114);
+            this.frmUsernameAlert.Location = new System.Drawing.Point(0, 114);
+            this.frmUsernameAlert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.frmUsernameAlert.Name = "frmUsernameAlert";
             this.frmUsernameAlert.Size = new System.Drawing.Size(220, 21);
             this.frmUsernameAlert.TabIndex = 6;
@@ -89,8 +91,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(36, 6);
-            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(39, 3);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(146, 26);
             this.guna2HtmlLabel1.TabIndex = 7;
@@ -108,8 +109,8 @@
             this.frmUsernameTextBox.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.frmUsernameTextBox.ForeColor = System.Drawing.Color.Black;
             this.frmUsernameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.frmUsernameTextBox.Location = new System.Drawing.Point(0, 37);
-            this.frmUsernameTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.frmUsernameTextBox.Location = new System.Drawing.Point(0, 36);
+            this.frmUsernameTextBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.frmUsernameTextBox.Name = "frmUsernameTextBox";
             this.frmUsernameTextBox.PasswordChar = '\0';
             this.frmUsernameTextBox.PlaceholderText = "";
@@ -122,7 +123,8 @@
             // 
             this.guna2PictureBox2.Image = global::vlute_course_manager.Properties.Resources.user;
             this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(1, 1);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(2, 2);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -136,6 +138,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.frmPasswordTextBox);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox3);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(950, 456);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(500, 135);
             this.guna2CustomGradientPanel2.TabIndex = 6;
@@ -145,7 +148,8 @@
             this.frmPasswordAlert.BackColor = System.Drawing.Color.Transparent;
             this.frmPasswordAlert.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.frmPasswordAlert.ForeColor = System.Drawing.Color.Red;
-            this.frmPasswordAlert.Location = new System.Drawing.Point(1, 114);
+            this.frmPasswordAlert.Location = new System.Drawing.Point(0, 113);
+            this.frmPasswordAlert.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.frmPasswordAlert.Name = "frmPasswordAlert";
             this.frmPasswordAlert.Size = new System.Drawing.Size(181, 21);
             this.frmPasswordAlert.TabIndex = 6;
@@ -156,8 +160,7 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(36, 6);
-            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(39, 6);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(91, 26);
             this.guna2HtmlLabel4.TabIndex = 7;
@@ -175,8 +178,8 @@
             this.frmPasswordTextBox.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.frmPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this.frmPasswordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.frmPasswordTextBox.Location = new System.Drawing.Point(0, 37);
-            this.frmPasswordTextBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.frmPasswordTextBox.Location = new System.Drawing.Point(0, 34);
+            this.frmPasswordTextBox.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.frmPasswordTextBox.Name = "frmPasswordTextBox";
             this.frmPasswordTextBox.PasswordChar = '\0';
             this.frmPasswordTextBox.PlaceholderText = "";
@@ -189,7 +192,8 @@
             // 
             this.guna2PictureBox3.Image = global::vlute_course_manager.Properties.Resources.password;
             this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(1, 1);
+            this.guna2PictureBox3.Location = new System.Drawing.Point(2, 2);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(30, 30);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -201,7 +205,7 @@
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
             this.guna2PictureBox1.ImageRotate = 0F;
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 36);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(1);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(800, 800);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -218,6 +222,7 @@
             this.frmLoginButton.Font = new System.Drawing.Font("Inter", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.frmLoginButton.ForeColor = System.Drawing.Color.White;
             this.frmLoginButton.Location = new System.Drawing.Point(950, 638);
+            this.frmLoginButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.frmLoginButton.Name = "frmLoginButton";
             this.frmLoginButton.Size = new System.Drawing.Size(500, 75);
             this.frmLoginButton.TabIndex = 7;
@@ -229,7 +234,8 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Inter", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(59)))), ((int)(((byte)(80)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(1354, 765);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(2031, 1177);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(96, 31);
             this.guna2HtmlLabel5.TabIndex = 8;
@@ -237,8 +243,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1584, 861);
@@ -249,7 +254,7 @@
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";

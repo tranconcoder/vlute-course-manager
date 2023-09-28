@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vlute_course_manager", "vlute_course_manager.csproj", "{50AE029B-D479-45A7-889C-021D5E9A9509}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50AE029B-D479-45A7-889C-021D5E9A9509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50AE029B-D479-45A7-889C-021D5E9A9509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50AE029B-D479-45A7-889C-021D5E9A9509}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{50AE029B-D479-45A7-889C-021D5E9A9509}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8FFC9042-11D8-4900-920F-94930B18D2F0}
+	EndGlobalSection
+EndGlobal

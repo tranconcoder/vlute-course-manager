@@ -1,0 +1,13 @@
+D:\Workspace\vlute_course_manager\bin\Debug\vlute_course_manager.exe.config
+D:\Workspace\vlute_course_manager\bin\Debug\vlute_course_manager.exe
+D:\Workspace\vlute_course_manager\bin\Debug\vlute_course_manager.pdb
+D:\Workspace\vlute_course_manager\bin\Debug\Guna.UI2.dll
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.csproj.AssemblyReference.cache
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.Form1.resources
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.Properties.Resources.resources
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.csproj.GenerateResource.cache
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.csproj.CoreCompileInputs.cache
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.csproj.CopyComplete
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.exe
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.pdb
+D:\Workspace\vlute_course_manager\obj\Debug\vlute_course_manager.Home.resources

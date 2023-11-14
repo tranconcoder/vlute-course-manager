@@ -46,10 +46,12 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBoxEnrollSession = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.labelSearch = new System.Windows.Forms.Label();
+            this.buttonSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.flowLayoutPanelCourseList = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.panelNavigateProfile.SuspendLayout();
@@ -76,7 +78,7 @@
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Padding = new System.Windows.Forms.Padding(45);
-            this.guna2Panel1.Size = new System.Drawing.Size(500, 1209);
+            this.guna2Panel1.Size = new System.Drawing.Size(500, 1206);
             this.guna2Panel1.TabIndex = 0;
             // 
             // guna2Panel5
@@ -280,73 +282,105 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.guna2ImageButton1);
-            this.splitContainer1.Panel2.Controls.Add(this.guna2TextBox1);
+            this.splitContainer1.Panel2.Controls.Add(this.comboBoxEnrollSession);
+            this.splitContainer1.Panel2.Controls.Add(this.labelSearch);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonSearch);
+            this.splitContainer1.Panel2.Controls.Add(this.textBoxSearch);
             this.splitContainer1.Panel2.Controls.Add(this.label7);
-            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanelCourseList);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(30);
             this.splitContainer1.Size = new System.Drawing.Size(2031, 1206);
             this.splitContainer1.SplitterDistance = 499;
             this.splitContainer1.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // comboBoxEnrollSession
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(33, 195);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1462, 978);
-            this.flowLayoutPanel1.TabIndex = 0;
+            this.comboBoxEnrollSession.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxEnrollSession.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEnrollSession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEnrollSession.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxEnrollSession.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxEnrollSession.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxEnrollSession.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxEnrollSession.ItemHeight = 30;
+            this.comboBoxEnrollSession.Location = new System.Drawing.Point(33, 33);
+            this.comboBoxEnrollSession.Name = "comboBoxEnrollSession";
+            this.comboBoxEnrollSession.Size = new System.Drawing.Size(1462, 36);
+            this.comboBoxEnrollSession.TabIndex = 5;
+            this.comboBoxEnrollSession.SelectedIndexChanged += new System.EventHandler(this.comboBoxEnrollSession_SelectedIndexChanged);
+            // 
+            // labelSearch
+            // 
+            this.labelSearch.AutoSize = true;
+            this.labelSearch.Font = new System.Drawing.Font("Inter", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labelSearch.Location = new System.Drawing.Point(33, 241);
+            this.labelSearch.Name = "labelSearch";
+            this.labelSearch.Size = new System.Drawing.Size(0, 31);
+            this.labelSearch.TabIndex = 4;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BorderRadius = 10;
+            this.buttonSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonSearch.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonSearch.ForeColor = System.Drawing.Color.White;
+            this.buttonSearch.Location = new System.Drawing.Point(1315, 147);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(180, 70);
+            this.buttonSearch.TabIndex = 3;
+            this.buttonSearch.Text = "Tìm kiếm";
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.BorderRadius = 10;
+            this.textBoxSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxSearch.DefaultText = "";
+            this.textBoxSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.textBoxSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxSearch.Location = new System.Drawing.Point(34, 147);
+            this.textBoxSearch.Margin = new System.Windows.Forms.Padding(6, 6, 30, 6);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.PasswordChar = '\0';
+            this.textBoxSearch.PlaceholderText = "";
+            this.textBoxSearch.SelectedText = "";
+            this.textBoxSearch.Size = new System.Drawing.Size(1248, 70);
+            this.textBoxSearch.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Inter", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(28, 30);
+            this.label7.Location = new System.Drawing.Point(28, 96);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(265, 31);
             this.label7.TabIndex = 1;
             this.label7.Text = "Danh sách học phần";
             // 
-            // guna2TextBox1
+            // flowLayoutPanelCourseList
             // 
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(36, 98);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(1119, 77);
-            this.guna2TextBox1.TabIndex = 2;
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(1431, 107);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(64, 54);
-            this.guna2ImageButton1.TabIndex = 3;
+            this.flowLayoutPanelCourseList.AutoScroll = true;
+            this.flowLayoutPanelCourseList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowLayoutPanelCourseList.Location = new System.Drawing.Point(33, 313);
+            this.flowLayoutPanelCourseList.Name = "flowLayoutPanelCourseList";
+            this.flowLayoutPanelCourseList.Size = new System.Drawing.Size(1462, 860);
+            this.flowLayoutPanelCourseList.TabIndex = 0;
             // 
             // HomeForm
             // 
+            this.AcceptButton = this.buttonSearch;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2055, 1230);
+            this.ClientSize = new System.Drawing.Size(2054, 1229);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomeForm";
@@ -395,9 +429,11 @@
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelCourseList;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxSearch;
+        private Guna.UI2.WinForms.Guna2Button buttonSearch;
+        private System.Windows.Forms.Label labelSearch;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxEnrollSession;
     }
 }

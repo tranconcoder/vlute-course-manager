@@ -83,6 +83,36 @@ namespace vlute_course_manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap courseIconGroup {
+            get {
+                object obj = ResourceManager.GetObject("courseIconGroup", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courseIconGroup1 {
+            get {
+                object obj = ResourceManager.GetObject("courseIconGroup1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courseIconSearch {
+            get {
+                object obj = ResourceManager.GetObject("courseIconSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap courseIconUser {
             get {
                 object obj = ResourceManager.GetObject("courseIconUser", resourceCulture);

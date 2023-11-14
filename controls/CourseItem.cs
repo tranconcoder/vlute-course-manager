@@ -19,9 +19,20 @@ namespace vlute_course_manager.controls
 
         #region Properties
         private string _courseName;
-        private string _courseId;
         private string _teacher;
-        private string _courseType;
+        private bool _practice;
+        private int _courseNumber;
+        private int _currentMemberCount;
+        private int _maxMemberCount;
+        private string _subjectName;
+        private byte _theoryCreditCount;
+        private byte _practiceCreditCount;
+        
+
+        private string getCourseType(bool practice)
+        {
+            return practice ? "Thực hành" : "Lý thuyết";
+        }
 
         [Category("Course info")]
         public string courseName
@@ -31,17 +42,6 @@ namespace vlute_course_manager.controls
             {
                 this._courseName = value;
                 this.labelCourseName.Text = value;
-            }
-        }
-
-        [Category("Course info")]
-        public string courseId
-        {
-            get { return this._courseId; }
-            set
-            {
-                this._courseId = value;
-                this.labelCourseId.Text = value;
             }
         }
 
@@ -57,13 +57,87 @@ namespace vlute_course_manager.controls
         }
 
         [Category("Course info")]
-        public string courseType
+        public int courseNumber 
         {
-            get { return this._courseType; }
+            get { return this._courseNumber; }
             set
             {
-                this._courseType = value;
-                this.labelCourseType.Text = value;
+                this._courseNumber= value;
+                this.labelCourseCode.Text = $"Lớp {value} - {this.getCourseType(this._practice)}";
+            }
+        }
+
+
+        [Category("Course info")]
+        public bool practice
+        {
+            get { return this._practice; }
+            set
+            {
+                this._practice= value;
+                this.labelCourseCode.Text = $"Lớp {this._courseNumber} - {this.getCourseType(value)}";
+            }
+        }
+
+        [Category("Course info")]
+        public int currentMemberCount
+        {
+            get { return this._currentMemberCount; }
+            set
+            {
+                this._currentMemberCount = value;
+                this.labelMemberCount.Text = $"{value}/{this._maxMemberCount}";
+
+                if (this._currentMemberCount == this._maxMemberCount)
+                {
+                    this.labelMemberCount.ForeColor = Color.Red;
+                }
+            }
+        }
+
+        [Category("Course info")]
+        public int maxMemberCount 
+        {
+            get { return this._maxMemberCount; }
+            set
+            {
+                this._maxMemberCount = value;
+                this.labelMemberCount.Text = $"{this._currentMemberCount}/{value}";
+            }
+        }
+
+        [Category("Course info")]
+        public string subjectName
+        {
+            get { return this._subjectName; }
+            set
+            {
+                this._subjectName = value;
+                this.labelCourseSubject.Text = value;
+            }
+        }
+
+
+        [Category("Course info")]
+        public byte theoryCreditCount
+        {
+            get { return this._theoryCreditCount; }
+            set
+            {
+                this._theoryCreditCount = value;
+                this.labelCourseCreditCount.Text = $"LT: {value}\tTH: {this._practiceCreditCount}";
+            }
+        }
+
+
+        [Category("Course info")]
+        public byte practiceCreditCount
+        {
+            get { return this._practiceCreditCount; }
+            set
+            {
+                this._practiceCreditCount = value;
+                this.labelCourseCreditCount.Text = $"LT: {this._theoryCreditCount}\tTH: {value}";
             }
         }
 

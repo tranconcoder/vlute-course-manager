@@ -1,6 +1,6 @@
 ﻿namespace vlute_course_manager
 {
-    partial class Login
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label1 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.frmUsernameAlert = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -70,7 +70,7 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.textBoxUsername);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2PictureBox2);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(844, 266);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(444, 120);
             this.guna2CustomGradientPanel1.TabIndex = 5;
@@ -81,10 +81,11 @@
             this.frmUsernameAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.frmUsernameAlert.ForeColor = System.Drawing.Color.Red;
             this.frmUsernameAlert.Location = new System.Drawing.Point(0, 101);
-            this.frmUsernameAlert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frmUsernameAlert.Margin = new System.Windows.Forms.Padding(4);
             this.frmUsernameAlert.Name = "frmUsernameAlert";
             this.frmUsernameAlert.Size = new System.Drawing.Size(205, 22);
             this.frmUsernameAlert.TabIndex = 6;
+            this.frmUsernameAlert.TabStop = false;
             this.frmUsernameAlert.Text = "Vui lòng điền tên đăng nhập.";
             this.frmUsernameAlert.Visible = false;
             // 
@@ -112,13 +113,13 @@
             this.textBoxUsername.ForeColor = System.Drawing.Color.Black;
             this.textBoxUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxUsername.Location = new System.Drawing.Point(0, 32);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(7);
             this.textBoxUsername.Name = "textBoxUsername";
             this.textBoxUsername.PasswordChar = '\0';
             this.textBoxUsername.PlaceholderText = "";
             this.textBoxUsername.SelectedText = "";
             this.textBoxUsername.Size = new System.Drawing.Size(444, 67);
-            this.textBoxUsername.TabIndex = 6;
+            this.textBoxUsername.TabIndex = 10;
             this.textBoxUsername.TextChanged += new System.EventHandler(this.textBoxUsername_TextChanged);
             // 
             // guna2PictureBox2
@@ -126,7 +127,7 @@
             this.guna2PictureBox2.Image = global::vlute_course_manager.Properties.Resources.user;
             this.guna2PictureBox2.ImageRotate = 0F;
             this.guna2PictureBox2.Location = new System.Drawing.Point(2, 2);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.Size = new System.Drawing.Size(27, 27);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,7 +141,7 @@
             this.guna2CustomGradientPanel2.Controls.Add(this.textBoxPassword);
             this.guna2CustomGradientPanel2.Controls.Add(this.guna2PictureBox3);
             this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(844, 405);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(444, 120);
             this.guna2CustomGradientPanel2.TabIndex = 6;
@@ -151,10 +152,11 @@
             this.frmPasswordAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.frmPasswordAlert.ForeColor = System.Drawing.Color.Red;
             this.frmPasswordAlert.Location = new System.Drawing.Point(0, 100);
-            this.frmPasswordAlert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frmPasswordAlert.Margin = new System.Windows.Forms.Padding(4);
             this.frmPasswordAlert.Name = "frmPasswordAlert";
             this.frmPasswordAlert.Size = new System.Drawing.Size(168, 22);
             this.frmPasswordAlert.TabIndex = 6;
+            this.frmPasswordAlert.TabStop = false;
             this.frmPasswordAlert.Text = "Vui lòng điền mật khẩu.";
             this.frmPasswordAlert.Visible = false;
             // 
@@ -166,6 +168,7 @@
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(84, 27);
             this.guna2HtmlLabel4.TabIndex = 7;
+            this.guna2HtmlLabel4.TabStop = false;
             this.guna2HtmlLabel4.Text = "Mật khẩu";
             // 
             // textBoxPassword
@@ -182,13 +185,13 @@
             this.textBoxPassword.ForeColor = System.Drawing.Color.Black;
             this.textBoxPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxPassword.Location = new System.Drawing.Point(0, 30);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(7);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.PlaceholderText = "";
             this.textBoxPassword.SelectedText = "";
             this.textBoxPassword.Size = new System.Drawing.Size(444, 67);
-            this.textBoxPassword.TabIndex = 6;
+            this.textBoxPassword.TabIndex = 9;
             this.textBoxPassword.TextChanged += new System.EventHandler(this.textBoxPassword_TextChanged);
             // 
             // guna2PictureBox3
@@ -196,7 +199,7 @@
             this.guna2PictureBox3.Image = global::vlute_course_manager.Properties.Resources.password;
             this.guna2PictureBox3.ImageRotate = 0F;
             this.guna2PictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2PictureBox3.Name = "guna2PictureBox3";
             this.guna2PictureBox3.Size = new System.Drawing.Size(27, 27);
             this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -226,7 +229,7 @@
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.buttonLogin.ForeColor = System.Drawing.Color.White;
             this.buttonLogin.Location = new System.Drawing.Point(844, 567);
-            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonLogin.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLogin.Name = "buttonLogin";
             this.buttonLogin.Size = new System.Drawing.Size(444, 67);
             this.buttonLogin.TabIndex = 7;
@@ -239,7 +242,7 @@
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(59)))), ((int)(((byte)(80)))));
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(1805, 1046);
-            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2HtmlLabel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(180, 57);
             this.guna2HtmlLabel5.TabIndex = 8;
@@ -251,15 +254,16 @@
             this.labelLoginFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.labelLoginFail.ForeColor = System.Drawing.Color.Red;
             this.labelLoginFail.Location = new System.Drawing.Point(846, 534);
-            this.labelLoginFail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.labelLoginFail.Margin = new System.Windows.Forms.Padding(4);
             this.labelLoginFail.Name = "labelLoginFail";
             this.labelLoginFail.Size = new System.Drawing.Size(246, 22);
             this.labelLoginFail.TabIndex = 8;
             this.labelLoginFail.Text = "Sai tên đăng nhập hoặc mật khẩu!";
             this.labelLoginFail.Visible = false;
             // 
-            // Login
+            // LoginForm
             // 
+            this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -278,7 +282,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login";
+            this.Name = "LoginForm";
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -304,15 +308,15 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2TextBox textBoxUsername;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel frmUsernameAlert;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel frmPasswordAlert;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox textBoxPassword;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
         private Guna.UI2.WinForms.Guna2Button buttonLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel labelLoginFail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel frmUsernameAlert;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }
 

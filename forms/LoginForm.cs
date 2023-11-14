@@ -15,9 +15,9 @@ using Org.BouncyCastle.Crypto.Generators;
 
 namespace vlute_course_manager
 {
-    public partial class Login : Form
+    public partial class LoginForm : Form
     {
-        public Login()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -106,6 +106,7 @@ namespace vlute_course_manager
             }
 
             HomeForm homeForm = new HomeForm(Convert.ToInt32(dataRow["user_id"]));
+            this.Hide();
             homeForm.ShowDialog();
             this.Close();
         }
@@ -115,6 +116,6 @@ namespace vlute_course_manager
             this.labelLoginFail.Visible = true;
             this.labelLoginFail.Text = message;
         }
-    }
+   }
 
 }

@@ -58,7 +58,6 @@ E:\Workspace\.NET\vlute-course-manager\bin\Debug\System.Text.Encoding.CodePages.
 E:\Workspace\.NET\vlute-course-manager\bin\Debug\System.Threading.AccessControl.xml
 E:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.Fody.CopyLocal.cache
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.AssemblyReference.cache
-D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.Login.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.Properties.Resources.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.GenerateResource.cache
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.CoreCompileInputs.cache
@@ -134,3 +133,5 @@ D:\Workspace\.NET\vlute-course-manager\bin\Debug\BCrypt.Net-Next.xml
 D:\Workspace\.NET\vlute-course-manager\bin\Debug\BouncyCastle.Cryptography.xml
 D:\Workspace\.NET\vlute-course-manager\bin\Debug\JetBrains.Annotations.xml
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.CourseItem.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.LoginForm.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.CourseDetailForm.resources

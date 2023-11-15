@@ -337,6 +337,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="classes\Utils.cs" />
     <Compile Include="controls\CourseItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -419,9 +420,7 @@
   <ItemGroup>
     <None Include="assets\images\formLogin\password.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="classes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="assets\images\formHome\user.png" />
   </ItemGroup>

@@ -27,7 +27,6 @@ namespace vlute_course_manager.controls
         private string _subjectName;
         private byte _theoryCreditCount;
         private byte _practiceCreditCount;
-        
 
         private string getCourseType(bool practice)
         {
@@ -88,10 +87,6 @@ namespace vlute_course_manager.controls
                 this._currentMemberCount = value;
                 this.labelMemberCount.Text = $"{value}/{this._maxMemberCount}";
 
-                if (this._currentMemberCount == this._maxMemberCount)
-                {
-                    this.labelMemberCount.ForeColor = Color.Red;
-                }
             }
         }
 
@@ -102,6 +97,15 @@ namespace vlute_course_manager.controls
             set
             {
                 this._maxMemberCount = value;
+
+                if (value < this._currentMemberCount)
+                {
+                    this.labelMemberCount.ForeColor = Color.Red;
+                } else
+                {
+                    this.labelMemberCount.ForeColor = Color.Black;
+                }
+
                 this.labelMemberCount.Text = $"{this._currentMemberCount}/{value}";
             }
         }
@@ -141,6 +145,10 @@ namespace vlute_course_manager.controls
             }
         }
 
+
+
         #endregion
+
+
     }
 }

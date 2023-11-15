@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Bunifu.UI.WinForms.Extensions;
-using MySql.Data.MySqlClient;
 using vlute_course_manager.controls;
 
 namespace vlute_course_manager
@@ -16,62 +8,58 @@ namespace vlute_course_manager
     public partial class HomeForm : Form
     {
         private DataTable sessionEnrollTable;
+        private DataRow userProfileRow;
         private MysqlConnect mysqlConnect;
+        private int userId;
 
         public HomeForm(int userId)
         {
             this.mysqlConnect = new MysqlConnect();
+            this.userId = userId;
 
             InitializeComponent();
-
-            this.initialEvent();
-        }
-
-        private void initialEvent()
-        {
-            // Panel profile/click event
-            foreach (Control control in this.panelNavigateProfile.Controls)
-            {
-                control.Click += panelNavigationClickHandle;
-            }
-        }
-        
-        private void panelNavigationClickHandle(object sender, EventArgs e)
-        {
-            ProfileForm profileForm = new ProfileForm();
-            profileForm.ShowDialog();
-        }
-
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelNavigateProfile_Click(object sender, EventArgs e)
-        {
         }
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            string getSessionTitleList = "SELECT * FROM `enroll_session` ORDER BY start_at";
-            this.sessionEnrollTable = mysqlConnect.selectQuery(getSessionTitleList);
+            // Initial UI user profile
+            this.initialProfile();
 
+            string getSessionTitleListQuery = "SELECT * FROM `enroll_session` ORDER BY start_at";
+
+            // Initial DataTable
+            this.sessionEnrollTable = this.mysqlConnect.selectQuery(getSessionTitleListQuery);
+
+            // Load UI data for comboBoxEnrollSession
             this.comboBoxEnrollSession.Items.Add("--- Chọn phiên đăng ký ---");
             this.comboBoxEnrollSession.SelectedIndex = 0;
-            this.sessionEnrollTable = this.mysqlConnect.selectQuery(getSessionTitleList);
 
+            // Load UI data for comboBoxEnrollSession
             foreach (DataRow dr in this.sessionEnrollTable.Rows)
-            {
                 this.comboBoxEnrollSession.Items.Add((string) dr["title"]);
-            }
+        }
 
+        private void initialProfile()
+        {
+            string getCurrentUserProfileQuery = $"call selectUserProfile({this.userId})";
+            this.userProfileRow = this.mysqlConnect.selectQuery(getCurrentUserProfileQuery).Rows[0];
 
-            if (this.flowLayoutPanelCourseList.Controls.Count == 0)
+            // Load UI data for userProfile
+            this.labelFullname.Text = (string) this.userProfileRow["fullname"];
+            this.labelStudentId.Text = (string) this.userProfileRow["student_id"];
+
+            switch ((string) this.userProfileRow["role"])
             {
-                this.flowLayoutPanelCourseList.Controls.Clear();
+                case "student":
+                    this.labelUserRole.Text = "SINH VIÊN";
+                    break;
+                case "teacher":
+                    this.labelUserRole.Text = "GIẢNG VIÊN";
+                    break;
+                case "admin":
+                    this.labelUserRole.Text = "QUẢN TRỊ VIÊN";
+                    break;
             }
-
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
@@ -82,7 +70,13 @@ namespace vlute_course_manager
             if (currentSessionIndex == 0) return;
 
             // Update search value label
-            this.labelSearch.Text = $"Đang tìm kiếm \"{searchValue}\"";
+            if (textBoxSearch.Text.Length == 0)
+            {
+                this.labelSearch.Text = "";
+            } else
+            {
+                this.labelSearch.Text = $"Đang tìm kiếm \"{searchValue}\"";
+            }
 
             // Updated list
             this.flowLayoutPanelCourseList.Controls.Clear();
@@ -92,7 +86,11 @@ namespace vlute_course_manager
                 $"  '{searchValue}'," +
                 $"  {this.sessionEnrollTable.Rows[currentSessionIndex - 1]["enroll_session_id"]}" +
                 $")");
+
             this.updateFlowLayoutData(dt);
+
+            // Focus to textboxSearch
+            this.textBoxSearch.Focus();
         }
 
         private void comboBoxEnrollSession_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,9 +126,20 @@ namespace vlute_course_manager
                 item.currentMemberCount = Convert.ToInt32(dr["current_member_count"]);
                 item.maxMemberCount = (int) dr["max_member_count"];
                 item.practice = Convert.ToInt32(dr["practice"]) == 1;
+                item.subjectName = (string) dr["subject_name"];
+                item.theoryCreditCount = (byte) dr["theory_credit_count"];
+                item.practiceCreditCount = (byte) dr["practice_credit_count"];
+
 
                 this.flowLayoutPanelCourseList.Controls.Add(item);
             }
         }
-   }
+
+        private void panelNavigateProfile_Click(object sender, EventArgs e)
+        {
+            ProfileForm profileForm = new ProfileForm(this.userId);
+            profileForm.ShowDialog();
+            this.initialProfile();
+        }
+    }
 }

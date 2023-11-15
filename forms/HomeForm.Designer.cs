@@ -31,6 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigateProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -39,10 +42,10 @@
             this.pictureBoxHome = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelUserRole = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelStudentId = new System.Windows.Forms.Label();
+            this.labelFullname = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -54,6 +57,8 @@
             this.flowLayoutPanelCourseList = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panelNavigateProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelNavigateHome.SuspendLayout();
@@ -83,6 +88,7 @@
             // 
             // guna2Panel5
             // 
+            this.guna2Panel5.Controls.Add(this.guna2Panel6);
             this.guna2Panel5.Controls.Add(this.panelNavigateProfile);
             this.guna2Panel5.Controls.Add(this.panelNavigateHome);
             this.guna2Panel5.Location = new System.Drawing.Point(48, 293);
@@ -90,6 +96,47 @@
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(400, 332);
             this.guna2Panel5.TabIndex = 2;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BorderRadius = 10;
+            this.guna2Panel6.Controls.Add(this.label2);
+            this.guna2Panel6.Controls.Add(this.guna2PictureBox2);
+            this.guna2Panel6.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            this.guna2Panel6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.guna2Panel6.Location = new System.Drawing.Point(0, 180);
+            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(20);
+            this.guna2Panel6.Size = new System.Drawing.Size(400, 70);
+            this.guna2Panel6.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(80, 26);
+            this.label2.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 25);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tạo lớp học phần";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(17, 17);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // panelNavigateProfile
             // 
@@ -189,9 +236,9 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.Controls.Add(this.label4);
+            this.guna2Panel3.Controls.Add(this.labelUserRole);
             this.guna2Panel3.Controls.Add(this.guna2Panel4);
-            this.guna2Panel3.Controls.Add(this.label2);
+            this.guna2Panel3.Controls.Add(this.labelFullname);
             this.guna2Panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(29)))), ((int)(((byte)(136)))));
             this.guna2Panel3.Location = new System.Drawing.Point(127, 33);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(20, 0, 0, 0);
@@ -199,22 +246,22 @@
             this.guna2Panel3.Size = new System.Drawing.Size(259, 74);
             this.guna2Panel3.TabIndex = 2;
             // 
-            // label4
+            // labelUserRole
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
-            this.label4.Location = new System.Drawing.Point(-3, 59);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 16);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Quản trị viên";
+            this.labelUserRole.AutoSize = true;
+            this.labelUserRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labelUserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(119)))), ((int)(((byte)(119)))));
+            this.labelUserRole.Location = new System.Drawing.Point(-3, 54);
+            this.labelUserRole.Name = "labelUserRole";
+            this.labelUserRole.Size = new System.Drawing.Size(97, 20);
+            this.labelUserRole.TabIndex = 2;
+            this.labelUserRole.Text = "Quản trị viên";
             // 
             // guna2Panel4
             // 
             this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel4.BorderRadius = 5;
-            this.guna2Panel4.Controls.Add(this.label3);
+            this.guna2Panel4.Controls.Add(this.labelStudentId);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.guna2Panel4.Location = new System.Drawing.Point(4, 30);
             this.guna2Panel4.Margin = new System.Windows.Forms.Padding(0);
@@ -222,28 +269,28 @@
             this.guna2Panel4.Size = new System.Drawing.Size(90, 20);
             this.guna2Panel4.TabIndex = 2;
             // 
-            // label3
+            // labelStudentId
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 1);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 20);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "22004015";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelStudentId.AutoSize = true;
+            this.labelStudentId.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labelStudentId.Location = new System.Drawing.Point(2, 1);
+            this.labelStudentId.Margin = new System.Windows.Forms.Padding(0);
+            this.labelStudentId.Name = "labelStudentId";
+            this.labelStudentId.Size = new System.Drawing.Size(81, 20);
+            this.labelStudentId.TabIndex = 0;
+            this.labelStudentId.Text = "22004015";
+            this.labelStudentId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // labelFullname
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(29)))), ((int)(((byte)(136)))));
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "TRẦN VĂN CÒN";
+            this.labelFullname.AutoSize = true;
+            this.labelFullname.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labelFullname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(29)))), ((int)(((byte)(136)))));
+            this.labelFullname.Location = new System.Drawing.Point(0, 0);
+            this.labelFullname.Name = "labelFullname";
+            this.labelFullname.Size = new System.Drawing.Size(163, 25);
+            this.labelFullname.TabIndex = 0;
+            this.labelFullname.Text = "TRẦN VĂN CÒN";
             // 
             // guna2CirclePictureBox1
             // 
@@ -389,6 +436,9 @@
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panelNavigateProfile.ResumeLayout(false);
             this.panelNavigateProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
@@ -417,10 +467,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelFullname;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelStudentId;
+        private System.Windows.Forms.Label labelUserRole;
         private Guna.UI2.WinForms.Guna2Panel panelNavigateHome;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2PictureBox pictureBoxHome;
@@ -435,5 +485,8 @@
         private Guna.UI2.WinForms.Guna2Button buttonSearch;
         private System.Windows.Forms.Label labelSearch;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxEnrollSession;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

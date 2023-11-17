@@ -130,7 +130,6 @@ namespace vlute_course_manager
                 item.theoryCreditCount = (byte) dr["theory_credit_count"];
                 item.practiceCreditCount = (byte) dr["practice_credit_count"];
 
-
                 this.flowLayoutPanelCourseList.Controls.Add(item);
             }
         }

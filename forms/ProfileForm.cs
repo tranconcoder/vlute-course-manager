@@ -64,26 +64,52 @@ namespace vlute_course_manager
         private void buttonApplyChange_Click(object sender, EventArgs e)
         {
             // Validate
+            bool isChangePassword = toggleSwitchChangePassword.Checked;
             this.textBoxFullname_TextChanged(null, null);
-            this.textBoxNewPassword_TextChanged(null, null);
-            this.textBoxRetypePassword_TextChanged(null, null);
+
+            if (isChangePassword)
+            {
+                this.textBoxNewPassword_TextChanged(null, null);
+                this.textBoxRetypePassword_TextChanged(null, null);
+            }
+
 
             // Any value invalid -> stop handle
-            if (!this.fullNameValid || !this.newPasswordValid || !this.retypePasswordValid) return;
+            if (
+                !this.fullNameValid || 
+                (isChangePassword && (!this.newPasswordValid || !this.retypePasswordValid))
+            ) return;
 
-            try
+            if (!((string) userProfileRow["fullname"]).Equals(this.textBoxFullname.Text))
             {
-                string getAuthDataQuery = $"SELECT `password` FROM `authenticate` WHERE `user_id` = {this.userProfileRow["user_id"]}";
-                DataTable authData = this.mysqlConnect.selectQuery(getAuthDataQuery);
-                string oldPasswordHash = (string) authData.Rows[0]["password"];
+                // Handle fullname
+                string updateFullnameQuery = $"UPDATE `user` SET `fullname` = '{this.textBoxFullname.Text}' " +
+                    $"WHERE `user_id` = {Convert.ToInt32(userProfileRow["user_id"])};";
 
-                if (BCrypt.Net.BCrypt.Verify(this.textBoxOldPassword.Text, oldPasswordHash))
+                this.mysqlConnect.query(updateFullnameQuery);
+            }
+
+            if (isChangePassword)
+            {
+                try
                 {
-                    
+                    // Handle password
+                    string getAuthDataQuery = $"SELECT `password` FROM `authenticate` WHERE `user_id` = {this.userProfileRow["user_id"]};";
+                    DataTable authData = this.mysqlConnect.selectQuery(getAuthDataQuery);
+                    string oldPasswordHash = (string) authData.Rows[0]["password"];
+                    string newPassword = this.textBoxNewPassword.Text;
+
+                    if (BCrypt.Net.BCrypt.Verify(this.textBoxOldPassword.Text, oldPasswordHash))
+                    {
+                        string newPasswordHash = BCrypt.Net.BCrypt.HashPassword(newPassword);
+                        string updatePasswordQuery = $"UPDATE `authenticate` SET `password` = {newPasswordHash}";
+
+                        this.mysqlConnect.query(updatePasswordQuery);
+                    } else this.labelValidateOldPassword.Text = "Sai mật khẩu!";
+                } catch(Exception ex)
+                {
+                    MessageBox.Show("Thay đổi thất bại, vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            } catch(Exception ex)
-            {
-                MessageBox.Show("Thay đổi thất bại, vui lòng thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -126,6 +152,25 @@ namespace vlute_course_manager
                 this.labelValidateRetypePassword.Visible = false;
                 this.retypePasswordValid = true;
             }
+        }
+
+        private void textBoxOldPassword_TextChanged(object sender, EventArgs e)
+        {
+            if (this.textBoxOldPassword.Text.Length == 0)
+                this.labelValidateOldPassword.Text = "Vui lòng nhập mật khẩu!";
+            else
+                this.labelValidateOldPassword.Text = "";
+        }
+
+        private void toggleSwitchChangePassword_CheckedChanged(object sender, EventArgs e)
+        {
+            bool toggleChecked = this.toggleSwitchChangePassword.Checked;
+            this.panelChangePassword.Visible = toggleChecked;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();       
         }
     }
 }

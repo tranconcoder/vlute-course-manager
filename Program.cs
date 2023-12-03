@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using vlute_course_manager.forms;
 
 namespace vlute_course_manager
 {
@@ -20,7 +19,7 @@ namespace vlute_course_manager
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CreateSubject());
+            Application.Run(new HomeForm(1));
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

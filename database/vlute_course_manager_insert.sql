@@ -110,18 +110,20 @@ INSERT INTO `vlute_course_manager`.`subject` (major_id, subject_name, subject_co
 	(1, 'Cơ sở dữ liệu phân tán', 'TH1607', 2, 1),
 	(1, 'Chuyên đề về công nghệ thông tin', 'TH1608', 2, 2);
     
--- Nhập danh sách khóa học
-INSERT INTO `vlute_course_manager`.`course`(subject_id, teacher_id, course_name, course_number, practice, max_member_count) VALUES 
-	(1, 2, "Khóa học CTDL&GT", 1, 1, 1),
-    (3, 2, "Object Oriented Programming", 1, 0, 10),
-    (4, 2, "Thuật toán", 2, 0, 30);
-
 -- Nhập phiên đăng ký
 INSERT INTO `vlute_course_manager`.`enroll_session`(title, start_at, date_range) VALUES
 	("Học kỳ 1 - Năm học 2022-2023", now(), 1),
     ("Học kỳ phụ - Năm học 2022-2023", now(), 2),
     ("Học kỳ 2 - Năm học 2022-2023", now(), 3),
     ("Học kỳ hè - Năm học 2022-2023", now(), 4);
+    
+-- Nhập danh sách khóa học
+INSERT INTO `vlute_course_manager`.`course`(subject_id, teacher_id, enroll_session_id, course_name, max_member_count, `description`) VALUES 
+	(1, 2, 1, "Khóa học CTDL&GT", 1, ""),
+    (3, 2, 1, "Object Oriented Programming", 10, ""),
+    (4, 2, 2, "Thuật toán", 30, "");
+
+
     
 -- Học phần được phép đăng ký cho đợt
 INSERT INTO `vlute_course_manager`.`course_session`(course_id, enroll_session_id) VALUES
@@ -131,9 +133,9 @@ INSERT INTO `vlute_course_manager`.`course_session`(course_id, enroll_session_id
     (3, 1);
 
 -- Đăng ký học phần
-INSERT INTO `vlute_course_manager`.`course_enroll`(course_id, enroll_session_id, student_id, enroll_at) VALUES
-	(1, 2, 1, now()),
-    (1, 2, 2, now());
+INSERT INTO `vlute_course_manager`.`course_enroll`(course_id, student_id, enroll_at) VALUES
+	(1, 1, now()),
+    (1, 2, now());
 
 SELECT * FROM `vlute_course_manager`.`course`;
 SELECT * FROM `vlute_course_manager`.`course_enroll`;
@@ -144,7 +146,7 @@ select * from `vlute_course_manager`.`subject`;
 select * from `vlute_course_manager`.`major`;
 
 USE `vlute_course_manager`;
-call searchCourse("lich", 1);
+call searchCourse("", 1);
 
 call selectUserProfile(1);
 

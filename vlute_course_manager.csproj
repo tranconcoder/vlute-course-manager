@@ -371,11 +371,17 @@
     <Compile Include="forms\CreateCourseForm.Designer.cs">
       <DependentUpon>CreateCourseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="forms\CreateSubject.cs">
+    <Compile Include="forms\CreateSubjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="forms\CreateSubject.Designer.cs">
-      <DependentUpon>CreateSubject.cs</DependentUpon>
+    <Compile Include="forms\CreateSubjectForm.Designer.cs">
+      <DependentUpon>CreateSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\GiveAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GiveAccountForm.Designer.cs">
+      <DependentUpon>GiveAccountForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\ProfileForm.cs">
       <SubType>Form</SubType>
@@ -413,8 +419,11 @@
     <EmbeddedResource Include="forms\CreateCourseForm.resx">
       <DependentUpon>CreateCourseForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="forms\CreateSubject.resx">
-      <DependentUpon>CreateSubject.cs</DependentUpon>
+    <EmbeddedResource Include="forms\CreateSubjectForm.resx">
+      <DependentUpon>CreateSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GiveAccountForm.resx">
+      <DependentUpon>GiveAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

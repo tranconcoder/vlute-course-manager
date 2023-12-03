@@ -40,13 +40,20 @@ namespace vlute_course_manager
             foreach (DataRow dr in this.sessionEnrollTable.Rows)
                 this.comboBoxEnrollSession.Items.Add((string)dr["title"]);
 
-            this.openFormOnClick(this.panelNavigateProfile, (a, b) =>
+            this.openFormOnClick(this.panelNavigateGiveAccount, (a, b) =>
             {
                 this.Hide();
-                ProfileForm profileForm = new ProfileForm(this.userId);
-                profileForm.ShowDialog();
+                GiveAccountForm giveAccountForm = new GiveAccountForm();
+                giveAccountForm.ShowDialog(this);
                 this.Show();
-                this.initialProfile();
+            });
+
+            this.openFormOnClick(this.panelNavigateCreateMajor, (a, b) =>
+            {
+                this.Hide();
+                CreateSubjectForm createSubjectForm = new CreateSubjectForm();
+                createSubjectForm.ShowDialog(this);
+                this.Show();
             });
             this.openFormOnClick(this.panelNavigateCreateCourse, (a, b) =>
             {
@@ -144,7 +151,7 @@ namespace vlute_course_manager
                 item.courseName = (string)dr["course_name"];
                 item.teacher = (string)dr["teacher_fullname"];
                 item.courseNumber = (int)dr["course_number"];
-                item.currentMemberCount = Convert.ToInt32(dr["current_member_count"]);
+                item.currentMemberCount = Convert.ToInt32(dr["member_count"]);
                 item.maxMemberCount = (int)dr["max_member_count"];
                 item.practice = Convert.ToInt32(dr["practice"]) == 1;
                 item.subjectName = (string)dr["subject_name"];

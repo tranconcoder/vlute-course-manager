@@ -30,23 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelNavigateCreateMajor = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.panelNavigateCreateCourse = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigateProfile = new Guna.UI2.WinForms.Guna2Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelNavigateHome = new Guna.UI2.WinForms.Guna2Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBoxHome = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelUserRole = new System.Windows.Forms.Label();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelStudentId = new System.Windows.Forms.Label();
             this.labelFullname = new System.Windows.Forms.Label();
-            this.pictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.comboBoxEnrollSession = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -55,38 +53,46 @@
             this.textBoxSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.flowLayoutPanelCourseList = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.panelNavigateCreateSubject = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelNavigateGiveAccount = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelGiveAccount = new System.Windows.Forms.Label();
+            this.guna2PictureBox5 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBoxHome = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBoxAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
+            this.panelNavigateCreateMajor.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.panelNavigateCreateCourse.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.panelNavigateProfile.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelNavigateHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
-            this.guna2Panel7.SuspendLayout();
+            this.panelNavigateCreateSubject.SuspendLayout();
+            this.panelNavigateGiveAccount.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.White;
-            this.guna2Panel1.Controls.Add(this.guna2Panel7);
+            this.guna2Panel1.Controls.Add(this.panelNavigateCreateSubject);
+            this.guna2Panel1.Controls.Add(this.panelNavigateCreateMajor);
             this.guna2Panel1.Controls.Add(this.guna2Panel5);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label1);
@@ -97,9 +103,42 @@
             this.guna2Panel1.Size = new System.Drawing.Size(500, 1206);
             this.guna2Panel1.TabIndex = 0;
             // 
+            // panelNavigateCreateMajor
+            // 
+            this.panelNavigateCreateMajor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelNavigateCreateMajor.AutoRoundedCorners = true;
+            this.panelNavigateCreateMajor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelNavigateCreateMajor.BorderRadius = 34;
+            this.panelNavigateCreateMajor.Controls.Add(this.label4);
+            this.panelNavigateCreateMajor.Controls.Add(this.guna2PictureBox4);
+            this.panelNavigateCreateMajor.FillColor = System.Drawing.Color.Transparent;
+            this.panelNavigateCreateMajor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            this.panelNavigateCreateMajor.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelNavigateCreateMajor.Location = new System.Drawing.Point(45, 473);
+            this.panelNavigateCreateMajor.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.panelNavigateCreateMajor.Name = "panelNavigateCreateMajor";
+            this.panelNavigateCreateMajor.Padding = new System.Windows.Forms.Padding(20);
+            this.panelNavigateCreateMajor.Size = new System.Drawing.Size(400, 70);
+            this.panelNavigateCreateMajor.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(80, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 25);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tạo chuyên ngành";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // guna2Panel5
             // 
-            this.guna2Panel5.Controls.Add(this.guna2Panel6);
+            this.guna2Panel5.Controls.Add(this.panelNavigateGiveAccount);
             this.guna2Panel5.Controls.Add(this.panelNavigateCreateCourse);
             this.guna2Panel5.Controls.Add(this.panelNavigateProfile);
             this.guna2Panel5.Controls.Add(this.panelNavigateHome);
@@ -137,23 +176,10 @@
             this.label2.Location = new System.Drawing.Point(80, 26);
             this.label2.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 25);
+            this.label2.Size = new System.Drawing.Size(243, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tạo môn học và phiên đăng ký";
+            this.label2.Text = "Tạo phiên và lớp học phần";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2PictureBox2
-            // 
-            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
-            this.guna2PictureBox2.ImageRotate = 0F;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(17, 17);
-            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 36);
-            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox2.TabIndex = 0;
-            this.guna2PictureBox2.TabStop = false;
             // 
             // panelNavigateProfile
             // 
@@ -183,19 +209,6 @@
             this.label6.Text = "Trang cá nhân";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::vlute_course_manager.Properties.Resources.profile;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 20);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 0;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // panelNavigateHome
             // 
             this.panelNavigateHome.BorderRadius = 10;
@@ -222,19 +235,6 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Trang chủ";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBoxHome
-            // 
-            this.pictureBoxHome.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxHome.Image = global::vlute_course_manager.Properties.Resources.home_active;
-            this.pictureBoxHome.ImageRotate = 0F;
-            this.pictureBoxHome.Location = new System.Drawing.Point(20, 20);
-            this.pictureBoxHome.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxHome.Name = "pictureBoxHome";
-            this.pictureBoxHome.Size = new System.Drawing.Size(30, 30);
-            this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxHome.TabIndex = 0;
-            this.pictureBoxHome.TabStop = false;
             // 
             // guna2Panel2
             // 
@@ -307,20 +307,6 @@
             this.labelFullname.Size = new System.Drawing.Size(163, 25);
             this.labelFullname.TabIndex = 0;
             this.labelFullname.Text = "TRẦN VĂN CÒN";
-            // 
-            // pictureBoxAvatar
-            // 
-            this.pictureBoxAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxAvatar.Image = global::vlute_course_manager.Properties.Resources.user1;
-            this.pictureBoxAvatar.ImageRotate = 0F;
-            this.pictureBoxAvatar.Location = new System.Drawing.Point(30, 30);
-            this.pictureBoxAvatar.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
-            this.pictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBoxAvatar.Size = new System.Drawing.Size(77, 77);
-            this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxAvatar.TabIndex = 0;
-            this.pictureBoxAvatar.TabStop = false;
             // 
             // label1
             // 
@@ -439,84 +425,84 @@
             this.flowLayoutPanelCourseList.Size = new System.Drawing.Size(1462, 860);
             this.flowLayoutPanelCourseList.TabIndex = 0;
             // 
-            // guna2Panel6
+            // panelNavigateCreateSubject
             // 
-            this.guna2Panel6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelNavigateCreateSubject.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel6.AutoRoundedCorners = true;
-            this.guna2Panel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel6.BorderRadius = 34;
-            this.guna2Panel6.Controls.Add(this.label3);
-            this.guna2Panel6.Controls.Add(this.guna2PictureBox3);
-            this.guna2Panel6.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
-            this.guna2Panel6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2Panel6.Location = new System.Drawing.Point(0, 270);
-            this.guna2Panel6.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Padding = new System.Windows.Forms.Padding(20);
-            this.guna2Panel6.Size = new System.Drawing.Size(400, 70);
-            this.guna2Panel6.TabIndex = 4;
+            this.panelNavigateCreateSubject.AutoRoundedCorners = true;
+            this.panelNavigateCreateSubject.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelNavigateCreateSubject.BorderRadius = 34;
+            this.panelNavigateCreateSubject.Controls.Add(this.label8);
+            this.panelNavigateCreateSubject.Controls.Add(this.guna2PictureBox5);
+            this.panelNavigateCreateSubject.FillColor = System.Drawing.Color.Transparent;
+            this.panelNavigateCreateSubject.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            this.panelNavigateCreateSubject.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelNavigateCreateSubject.Location = new System.Drawing.Point(45, 563);
+            this.panelNavigateCreateSubject.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.panelNavigateCreateSubject.Name = "panelNavigateCreateSubject";
+            this.panelNavigateCreateSubject.Padding = new System.Windows.Forms.Padding(20);
+            this.panelNavigateCreateSubject.Size = new System.Drawing.Size(400, 70);
+            this.panelNavigateCreateSubject.TabIndex = 5;
             // 
-            // label3
+            // label8
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(80, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 25);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tạo lớp học phần";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(80, 26);
+            this.label8.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(127, 25);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Tạo môn học";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2PictureBox3
+            // panelNavigateGiveAccount
             // 
-            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
-            this.guna2PictureBox3.ImageRotate = 0F;
-            this.guna2PictureBox3.Location = new System.Drawing.Point(17, 17);
-            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2PictureBox3.Name = "guna2PictureBox3";
-            this.guna2PictureBox3.Size = new System.Drawing.Size(36, 36);
-            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox3.TabIndex = 0;
-            this.guna2PictureBox3.TabStop = false;
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelNavigateGiveAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel7.AutoRoundedCorners = true;
-            this.guna2Panel7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.guna2Panel7.BorderRadius = 34;
-            this.guna2Panel7.Controls.Add(this.label4);
-            this.guna2Panel7.Controls.Add(this.guna2PictureBox4);
-            this.guna2Panel7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
-            this.guna2Panel7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2Panel7.Location = new System.Drawing.Point(45, 473);
-            this.guna2Panel7.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Padding = new System.Windows.Forms.Padding(20);
-            this.guna2Panel7.Size = new System.Drawing.Size(400, 70);
-            this.guna2Panel7.TabIndex = 4;
+            this.panelNavigateGiveAccount.AutoRoundedCorners = true;
+            this.panelNavigateGiveAccount.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panelNavigateGiveAccount.BorderRadius = 34;
+            this.panelNavigateGiveAccount.Controls.Add(this.labelGiveAccount);
+            this.panelNavigateGiveAccount.Controls.Add(this.guna2PictureBox3);
+            this.panelNavigateGiveAccount.FillColor = System.Drawing.Color.Transparent;
+            this.panelNavigateGiveAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            this.panelNavigateGiveAccount.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelNavigateGiveAccount.Location = new System.Drawing.Point(0, 450);
+            this.panelNavigateGiveAccount.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+            this.panelNavigateGiveAccount.Name = "panelNavigateGiveAccount";
+            this.panelNavigateGiveAccount.Padding = new System.Windows.Forms.Padding(20);
+            this.panelNavigateGiveAccount.Size = new System.Drawing.Size(400, 70);
+            this.panelNavigateGiveAccount.TabIndex = 4;
             // 
-            // label4
+            // labelGiveAccount
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(80, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 25);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tạo môn học";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelGiveAccount.AutoSize = true;
+            this.labelGiveAccount.BackColor = System.Drawing.Color.Transparent;
+            this.labelGiveAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labelGiveAccount.Location = new System.Drawing.Point(80, 26);
+            this.labelGiveAccount.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.labelGiveAccount.Name = "labelGiveAccount";
+            this.labelGiveAccount.Size = new System.Drawing.Size(133, 25);
+            this.labelGiveAccount.TabIndex = 1;
+            this.labelGiveAccount.Text = "Cấp tài khoản";
+            this.labelGiveAccount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2PictureBox5
+            // 
+            this.guna2PictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
+            this.guna2PictureBox5.ImageRotate = 0F;
+            this.guna2PictureBox5.Location = new System.Drawing.Point(17, 17);
+            this.guna2PictureBox5.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox5.Name = "guna2PictureBox5";
+            this.guna2PictureBox5.Size = new System.Drawing.Size(36, 36);
+            this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox5.TabIndex = 0;
+            this.guna2PictureBox5.TabStop = false;
             // 
             // guna2PictureBox4
             // 
@@ -531,6 +517,72 @@
             this.guna2PictureBox4.TabIndex = 0;
             this.guna2PictureBox4.TabStop = false;
             // 
+            // guna2PictureBox3
+            // 
+            this.guna2PictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox3.Image")));
+            this.guna2PictureBox3.ImageRotate = 0F;
+            this.guna2PictureBox3.Location = new System.Drawing.Point(17, 17);
+            this.guna2PictureBox3.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox3.Name = "guna2PictureBox3";
+            this.guna2PictureBox3.Size = new System.Drawing.Size(36, 36);
+            this.guna2PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox3.TabIndex = 0;
+            this.guna2PictureBox3.TabStop = false;
+            // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(17, 17);
+            this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(36, 36);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 0;
+            this.guna2PictureBox2.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::vlute_course_manager.Properties.Resources.profile;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(20, 20);
+            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(30, 30);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pictureBoxHome
+            // 
+            this.pictureBoxHome.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxHome.Image = global::vlute_course_manager.Properties.Resources.home_active;
+            this.pictureBoxHome.ImageRotate = 0F;
+            this.pictureBoxHome.Location = new System.Drawing.Point(20, 20);
+            this.pictureBoxHome.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxHome.Name = "pictureBoxHome";
+            this.pictureBoxHome.Size = new System.Drawing.Size(30, 30);
+            this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxHome.TabIndex = 0;
+            this.pictureBoxHome.TabStop = false;
+            // 
+            // pictureBoxAvatar
+            // 
+            this.pictureBoxAvatar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxAvatar.Image = global::vlute_course_manager.Properties.Resources.user1;
+            this.pictureBoxAvatar.ImageRotate = 0F;
+            this.pictureBoxAvatar.Location = new System.Drawing.Point(30, 30);
+            this.pictureBoxAvatar.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBoxAvatar.Name = "pictureBoxAvatar";
+            this.pictureBoxAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxAvatar.Size = new System.Drawing.Size(77, 77);
+            this.pictureBoxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxAvatar.TabIndex = 0;
+            this.pictureBoxAvatar.TabStop = false;
+            // 
             // HomeForm
             // 
             this.AcceptButton = this.buttonSearch;
@@ -544,33 +596,36 @@
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.panelNavigateCreateMajor.ResumeLayout(false);
+            this.panelNavigateCreateMajor.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
             this.panelNavigateCreateCourse.ResumeLayout(false);
             this.panelNavigateCreateCourse.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.panelNavigateProfile.ResumeLayout(false);
             this.panelNavigateProfile.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelNavigateHome.ResumeLayout(false);
             this.panelNavigateHome.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
-            this.guna2Panel7.ResumeLayout(false);
-            this.guna2Panel7.PerformLayout();
+            this.panelNavigateCreateSubject.ResumeLayout(false);
+            this.panelNavigateCreateSubject.PerformLayout();
+            this.panelNavigateGiveAccount.ResumeLayout(false);
+            this.panelNavigateGiveAccount.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -603,11 +658,14 @@
         private Guna.UI2.WinForms.Guna2Panel panelNavigateCreateCourse;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
+        private Guna.UI2.WinForms.Guna2Panel panelNavigateCreateMajor;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
+        private Guna.UI2.WinForms.Guna2Panel panelNavigateCreateSubject;
+        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox5;
+        private Guna.UI2.WinForms.Guna2Panel panelNavigateGiveAccount;
+        private System.Windows.Forms.Label labelGiveAccount;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
     }
 }

@@ -1,31 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System.Data;
 
 
 namespace vlute_course_manager
 {
-    internal class MysqlConnect
+    internal class MySQLConnect
     {
         readonly private string HOST = "localhost";
         readonly private int PORT = 3306;
         private string USERNAME = "trancon";
         private string PASSWORD = "Anhnam9ce*";
-        private string DATABASE_NAME= "vlute_course_manager";
+        private string DATABASE_NAME = "vlute_course_manager";
 
         private static MySqlConnection _connection;
 
-        public MysqlConnect()
+        public MySQLConnect()
         {
             if (_connection == null)
             {
                 _connection = new MySqlConnection(
                     $"server={this.HOST};port={this.PORT};user={this.USERNAME};" +
-                    $"pwd={this.PASSWORD};database={this.DATABASE_NAME}"
+                    $"pwd={this.PASSWORD};database={this.DATABASE_NAME};" +
+                    $"AllowUserVariables=True;"
                 );
             }
         }
@@ -45,7 +41,15 @@ namespace vlute_course_manager
             return dataTable;
         }
 
-        public int query(string query) {
+        public DataRow selectQueryOne(string query)
+        {
+            DataTable result = this.selectQuery(query);
+
+            return result.Rows[0];
+        }
+
+        public int query(string query)
+        {
             MySqlCommand mysqlCommand = new MySqlCommand(query, _connection);
             _connection.Open();
 

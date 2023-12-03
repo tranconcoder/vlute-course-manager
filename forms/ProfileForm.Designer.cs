@@ -59,10 +59,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Inter", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
             this.label1.Location = new System.Drawing.Point(823, 103);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(551, 60);
+            this.label1.Size = new System.Drawing.Size(553, 58);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN CÁ NHÂN";
             // 
@@ -138,10 +138,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label3.Location = new System.Drawing.Point(43, 76);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 36);
+            this.label3.Size = new System.Drawing.Size(177, 36);
             this.label3.TabIndex = 6;
             this.label3.Text = "Mật khẩu cũ";
             // 
@@ -180,14 +180,15 @@
             this.labelValidateOldPassword.Size = new System.Drawing.Size(238, 25);
             this.labelValidateOldPassword.TabIndex = 17;
             this.labelValidateOldPassword.Text = "Vui lòng nhập mật khẩu";
+            this.labelValidateOldPassword.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label4.Location = new System.Drawing.Point(43, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 36);
+            this.label4.Size = new System.Drawing.Size(192, 36);
             this.label4.TabIndex = 8;
             this.label4.Text = "Mật khẩu mới";
             // 
@@ -202,6 +203,7 @@
             this.labelValidateNewPassword.Size = new System.Drawing.Size(238, 25);
             this.labelValidateNewPassword.TabIndex = 16;
             this.labelValidateNewPassword.Text = "Vui lòng nhập mật khẩu";
+            this.labelValidateNewPassword.Visible = false;
             // 
             // textBoxRetypePassword
             // 
@@ -230,10 +232,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label5.Location = new System.Drawing.Point(43, 321);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(261, 36);
+            this.label5.Size = new System.Drawing.Size(250, 36);
             this.label5.TabIndex = 11;
             this.label5.Text = "Xác nhận MK mới";
             // 
@@ -246,6 +248,7 @@
             this.labelValidateRetypePassword.Size = new System.Drawing.Size(238, 25);
             this.labelValidateRetypePassword.TabIndex = 14;
             this.labelValidateRetypePassword.Text = "Vui lòng nhập mật khẩu";
+            this.labelValidateRetypePassword.Visible = false;
             // 
             // toggleSwitchChangePassword
             // 
@@ -271,10 +274,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label6.Location = new System.Drawing.Point(543, 194);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(200, 36);
+            this.label6.Size = new System.Drawing.Size(188, 36);
             this.label6.TabIndex = 19;
             this.label6.Text = "Đổi mật khẩu";
             // 
@@ -308,10 +311,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.label2.Location = new System.Drawing.Point(543, 89);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 36);
+            this.label2.Size = new System.Drawing.Size(141, 36);
             this.label2.TabIndex = 3;
             this.label2.Text = "Họ và tên";
             // 
@@ -371,6 +374,7 @@
             this.buttonReset.Size = new System.Drawing.Size(300, 80);
             this.buttonReset.TabIndex = 12;
             this.buttonReset.Text = "Đặt lại";
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // buttonApplyChange
             // 
@@ -403,7 +407,6 @@
             this.Name = "ProfileForm";
             this.Text = "Thông tin cá nhân";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ProfileForm_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using vlute_course_manager.forms;
 
 namespace vlute_course_manager
 {
@@ -14,6 +12,7 @@ namespace vlute_course_manager
         [STAThread]
         static void Main()
         {
+
             if (Environment.OSVersion.Version.Major >= 6)
             {
                 SetProcessDPIAware();
@@ -21,7 +20,7 @@ namespace vlute_course_manager
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new CreateSubject());
         }
 
         [System.Runtime.InteropServices.DllImport("user32.dll")]

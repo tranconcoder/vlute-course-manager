@@ -313,10 +313,10 @@
         private Guna.UI2.WinForms.Guna2TextBox textBoxPassword;
         private Guna.UI2.WinForms.Guna2Button buttonLogin;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labelLoginFail;
         private Guna.UI2.WinForms.Guna2HtmlLabel frmUsernameAlert;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labelLoginFail;
     }
 }
 

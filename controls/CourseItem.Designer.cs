@@ -29,37 +29,97 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseItem));
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.buttonViewCourse = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelMemberCountWarning = new System.Windows.Forms.Label();
+            this.progressBarMemberCount = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.labelCourseCreditCount = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.labelCourseSubject = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.labelMemberCount = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.labelCourseCode = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.labelTeacher = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelCourseName = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonViewCourse = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.Controls.Add(this.buttonViewCourse);
+            this.guna2Panel1.Controls.Add(this.guna2Button1);
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.panel1);
+            this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1420, 250);
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // buttonViewCourse
+            // 
+            this.buttonViewCourse.BorderRadius = 10;
+            this.buttonViewCourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonViewCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonViewCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonViewCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonViewCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
+            this.buttonViewCourse.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonViewCourse.ForeColor = System.Drawing.Color.White;
+            this.buttonViewCourse.Location = new System.Drawing.Point(1237, 129);
+            this.buttonViewCourse.Name = "buttonViewCourse";
+            this.buttonViewCourse.Size = new System.Drawing.Size(160, 47);
+            this.buttonViewCourse.TabIndex = 7;
+            this.buttonViewCourse.Text = "Xem";
+            this.buttonViewCourse.Click += new System.EventHandler(this.buttonViewCourse_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(1237, 65);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(160, 47);
+            this.guna2Button1.TabIndex = 6;
+            this.guna2Button1.Text = "Đăng ký";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::vlute_course_manager.Properties.Resources.courseIcon;
+            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(204, 204);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.labelMemberCountWarning);
+            this.panel1.Controls.Add(this.progressBarMemberCount);
             this.panel1.Controls.Add(this.labelCourseCreditCount);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.labelCourseSubject);
             this.panel1.Controls.Add(this.pictureBox5);
-            this.panel1.Controls.Add(this.labelMemberCount);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.labelCourseCode);
             this.panel1.Controls.Add(this.pictureBox3);
@@ -69,7 +129,35 @@
             this.panel1.Location = new System.Drawing.Point(263, 23);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(935, 204);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 5;
+            // 
+            // labelMemberCountWarning
+            // 
+            this.labelMemberCountWarning.AutoSize = true;
+            this.labelMemberCountWarning.Location = new System.Drawing.Point(239, 176);
+            this.labelMemberCountWarning.Name = "labelMemberCountWarning";
+            this.labelMemberCountWarning.Size = new System.Drawing.Size(80, 25);
+            this.labelMemberCountWarning.TabIndex = 12;
+            this.labelMemberCountWarning.Text = "Đã đầy";
+            // 
+            // progressBarMemberCount
+            // 
+            this.progressBarMemberCount.BorderColor = System.Drawing.Color.Transparent;
+            this.progressBarMemberCount.BorderRadius = 6;
+            this.progressBarMemberCount.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.progressBarMemberCount.ForeColor = System.Drawing.Color.White;
+            this.progressBarMemberCount.Location = new System.Drawing.Point(46, 172);
+            this.progressBarMemberCount.Name = "progressBarMemberCount";
+            this.progressBarMemberCount.ProgressBrushMode = Guna.UI2.WinForms.Enums.BrushMode.SolidTransition;
+            this.progressBarMemberCount.ProgressColor = System.Drawing.Color.Lime;
+            this.progressBarMemberCount.ProgressColor2 = System.Drawing.Color.Red;
+            this.progressBarMemberCount.ShowText = true;
+            this.progressBarMemberCount.Size = new System.Drawing.Size(187, 29);
+            this.progressBarMemberCount.TabIndex = 11;
+            this.progressBarMemberCount.Text = "30/30";
+            this.progressBarMemberCount.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Custom;
+            this.progressBarMemberCount.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.progressBarMemberCount.Value = 100;
             // 
             // labelCourseCreditCount
             // 
@@ -97,9 +185,9 @@
             this.labelCourseSubject.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.labelCourseSubject.Location = new System.Drawing.Point(519, 63);
             this.labelCourseSubject.Name = "labelCourseSubject";
-            this.labelCourseSubject.Size = new System.Drawing.Size(209, 29);
+            this.labelCourseSubject.Size = new System.Drawing.Size(322, 29);
             this.labelCourseSubject.TabIndex = 8;
-            this.labelCourseSubject.Text = "Lập trình DotNET";
+            this.labelCourseSubject.Text = "Lập trình DotNET (TH1337)";
             // 
             // pictureBox5
             // 
@@ -111,20 +199,10 @@
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
-            // labelMemberCount
-            // 
-            this.labelMemberCount.AutoSize = true;
-            this.labelMemberCount.Font = new System.Drawing.Font("Inter", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.labelMemberCount.Location = new System.Drawing.Point(41, 175);
-            this.labelMemberCount.Name = "labelMemberCount";
-            this.labelMemberCount.Size = new System.Drawing.Size(82, 29);
-            this.labelMemberCount.TabIndex = 6;
-            this.labelMemberCount.Text = "30/30";
-            // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::vlute_course_manager.Properties.Resources.courseIconGroup1;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 175);
+            this.pictureBox4.Location = new System.Drawing.Point(0, 169);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(32, 32);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -181,59 +259,16 @@
             this.labelCourseName.TabIndex = 0;
             this.labelCourseName.Text = "Lập trình dotNET (2.2)";
             // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1237, 65);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(160, 47);
-            this.guna2Button1.TabIndex = 2;
-            this.guna2Button1.Text = "Đăng ký";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::vlute_course_manager.Properties.Resources.courseIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // buttonViewCourse
-            // 
-            this.buttonViewCourse.BorderRadius = 10;
-            this.buttonViewCourse.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.buttonViewCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.buttonViewCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.buttonViewCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonViewCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
-            this.buttonViewCourse.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.buttonViewCourse.ForeColor = System.Drawing.Color.White;
-            this.buttonViewCourse.Location = new System.Drawing.Point(1237, 129);
-            this.buttonViewCourse.Name = "buttonViewCourse";
-            this.buttonViewCourse.Size = new System.Drawing.Size(160, 47);
-            this.buttonViewCourse.TabIndex = 3;
-            this.buttonViewCourse.Text = "Xem";
-            // 
             // CourseItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            this.Controls.Add(this.buttonViewCourse);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.guna2Panel1);
             this.Name = "CourseItem";
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Size = new System.Drawing.Size(1420, 250);
+            this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -241,27 +276,28 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button buttonViewCourse;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelTeacher;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label labelCourseName;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label labelMemberCount;
+        private System.Windows.Forms.Label labelMemberCountWarning;
+        private Guna.UI2.WinForms.Guna2ProgressBar progressBarMemberCount;
+        private System.Windows.Forms.Label labelCourseCreditCount;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label labelCourseSubject;
+        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label labelCourseCode;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label labelCourseSubject;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.Label labelCourseCreditCount;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private Guna.UI2.WinForms.Guna2Button buttonViewCourse;
+        private System.Windows.Forms.Label labelTeacher;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label labelCourseName;
     }
 }

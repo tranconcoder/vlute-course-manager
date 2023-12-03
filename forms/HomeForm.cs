@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data;
+using System.Drawing;
 using System.Windows.Forms;
 using vlute_course_manager.controls;
+using vlute_course_manager.forms;
 
 namespace vlute_course_manager
 {
@@ -9,12 +11,12 @@ namespace vlute_course_manager
     {
         private DataTable sessionEnrollTable;
         private DataRow userProfileRow;
-        private MysqlConnect mysqlConnect;
+        private MySQLConnect mysqlConnect;
         private int userId;
 
         public HomeForm(int userId)
         {
-            this.mysqlConnect = new MysqlConnect();
+            this.mysqlConnect = new MySQLConnect();
             this.userId = userId;
 
             InitializeComponent();
@@ -36,7 +38,23 @@ namespace vlute_course_manager
 
             // Load UI data for comboBoxEnrollSession
             foreach (DataRow dr in this.sessionEnrollTable.Rows)
-                this.comboBoxEnrollSession.Items.Add((string) dr["title"]);
+                this.comboBoxEnrollSession.Items.Add((string)dr["title"]);
+
+            this.openFormOnClick(this.panelNavigateProfile, (a, b) =>
+            {
+                this.Hide();
+                ProfileForm profileForm = new ProfileForm(this.userId);
+                profileForm.ShowDialog();
+                this.Show();
+                this.initialProfile();
+            });
+            this.openFormOnClick(this.panelNavigateCreateCourse, (a, b) =>
+            {
+                this.Hide();
+                CreateCourseForm createCourseForm = new CreateCourseForm(this.userId);
+                createCourseForm.ShowDialog();
+                this.Show();
+            });
         }
 
         private void initialProfile()
@@ -45,10 +63,11 @@ namespace vlute_course_manager
             this.userProfileRow = this.mysqlConnect.selectQuery(getCurrentUserProfileQuery).Rows[0];
 
             // Load UI data for userProfile
-            this.labelFullname.Text = (string) this.userProfileRow["fullname"];
-            this.labelStudentId.Text = (string) this.userProfileRow["student_id"];
+            this.pictureBoxAvatar.Image = new Bitmap((string)this.userProfileRow["avatar"]);
+            this.labelFullname.Text = (string)this.userProfileRow["fullname"];
+            this.labelStudentId.Text = (string)this.userProfileRow["student_id"];
 
-            switch ((string) this.userProfileRow["role"])
+            switch ((string)this.userProfileRow["role"])
             {
                 case "student":
                     this.labelUserRole.Text = "SINH VIÊN";
@@ -73,7 +92,8 @@ namespace vlute_course_manager
             if (textBoxSearch.Text.Length == 0)
             {
                 this.labelSearch.Text = "";
-            } else
+            }
+            else
             {
                 this.labelSearch.Text = $"Đang tìm kiếm \"{searchValue}\"";
             }
@@ -95,7 +115,7 @@ namespace vlute_course_manager
 
         private void comboBoxEnrollSession_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = this.comboBoxEnrollSession.SelectedIndex ;
+            int index = this.comboBoxEnrollSession.SelectedIndex;
 
             if (index == 0)
             {
@@ -120,25 +140,30 @@ namespace vlute_course_manager
             foreach (DataRow dr in dt.Rows)
             {
                 CourseItem item = new CourseItem();
-                item.courseName = (string) dr["course_name"];
-                item.teacher = (string) dr["teacher_fullname"];
-                item.courseNumber = (int) dr["course_number"];
+                item.courseId = Convert.ToInt32(dr["course_id"]);
+                item.courseName = (string)dr["course_name"];
+                item.teacher = (string)dr["teacher_fullname"];
+                item.courseNumber = (int)dr["course_number"];
                 item.currentMemberCount = Convert.ToInt32(dr["current_member_count"]);
-                item.maxMemberCount = (int) dr["max_member_count"];
+                item.maxMemberCount = (int)dr["max_member_count"];
                 item.practice = Convert.ToInt32(dr["practice"]) == 1;
-                item.subjectName = (string) dr["subject_name"];
-                item.theoryCreditCount = (byte) dr["theory_credit_count"];
-                item.practiceCreditCount = (byte) dr["practice_credit_count"];
+                item.subjectName = (string)dr["subject_name"];
+                item.subjectCode = (string)dr["subject_code"];
+                item.theoryCreditCount = (byte)dr["theory_credit_count"];
+                item.practiceCreditCount = (byte)dr["practice_credit_count"];
 
                 this.flowLayoutPanelCourseList.Controls.Add(item);
             }
         }
 
-        private void panelNavigateProfile_Click(object sender, EventArgs e)
+        private void openFormOnClick(Panel panel, EventHandler cb)
         {
-            ProfileForm profileForm = new ProfileForm(this.userId);
-            profileForm.ShowDialog();
-            this.initialProfile();
+            panel.Click += cb;
+
+            foreach (Control control in panel.Controls)
+            {
+                control.Click += cb;
+            }
         }
     }
 }

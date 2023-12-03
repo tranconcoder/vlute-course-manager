@@ -12,9 +12,14 @@ namespace vlute_course_manager.forms
 {
     public partial class CourseDetailForm : Form
     {
-        public CourseDetailForm()
+        public CourseDetailForm(int courseId)
         {
             InitializeComponent();
+        }
+
+        private void CourseDetailForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

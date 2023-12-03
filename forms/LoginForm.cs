@@ -1,17 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.Design;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BCrypt.Net;
-using Org.BouncyCastle.Crypto.Generators;
 
 namespace vlute_course_manager
 {
@@ -85,12 +75,13 @@ namespace vlute_course_manager
 
             if (!validateUsernameResult || !validatePasswordResult) return;
 
-            MysqlConnect mysqlConnect = new MysqlConnect();
+            MySQLConnect mysqlConnect = new MySQLConnect();
 
+            string username = this.textBoxUsername.Text;
             string password = this.textBoxPassword.Text;
             string query = $"SELECT user_id, username, password FROM `authenticate` " +
                 $"WHERE username = '{this.textBoxUsername.Text}'";
-            
+
             DataTable dataTable = mysqlConnect.selectQuery(query);
             if (dataTable.Rows.Count == 0)
             {
@@ -99,7 +90,7 @@ namespace vlute_course_manager
             }
 
             DataRow dataRow = dataTable.Rows[0];
-            if (!BCrypt.Net.BCrypt.Verify(password, (string) dataRow["password"]))
+            if (!BCrypt.Net.BCrypt.Verify(password, (string)dataRow["password"]))
             {
                 this.handleLoginFail(this.LOGIN_FAIL_ALERT);
                 return;
@@ -116,6 +107,6 @@ namespace vlute_course_manager
             this.labelLoginFail.Visible = true;
             this.labelLoginFail.Text = message;
         }
-   }
+    }
 
 }

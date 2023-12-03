@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using vlute_course_manager.forms;
 
 namespace vlute_course_manager.controls
 {
@@ -18,6 +13,7 @@ namespace vlute_course_manager.controls
         }
 
         #region Properties
+        private int _id;
         private string _courseName;
         private string _teacher;
         private bool _practice;
@@ -25,12 +21,20 @@ namespace vlute_course_manager.controls
         private int _currentMemberCount;
         private int _maxMemberCount;
         private string _subjectName;
+        private string _subjectCode;
         private byte _theoryCreditCount;
         private byte _practiceCreditCount;
 
         private string getCourseType(bool practice)
         {
             return practice ? "Thực hành" : "Lý thuyết";
+        }
+
+        [Category("Course info")]
+        public int courseId
+        {
+            get { return this._id; }
+            set { this._id = value; }
         }
 
         [Category("Course info")]
@@ -56,12 +60,12 @@ namespace vlute_course_manager.controls
         }
 
         [Category("Course info")]
-        public int courseNumber 
+        public int courseNumber
         {
             get { return this._courseNumber; }
             set
             {
-                this._courseNumber= value;
+                this._courseNumber = value;
                 this.labelCourseCode.Text = $"Lớp {value} - {this.getCourseType(this._practice)}";
             }
         }
@@ -73,7 +77,7 @@ namespace vlute_course_manager.controls
             get { return this._practice; }
             set
             {
-                this._practice= value;
+                this._practice = value;
                 this.labelCourseCode.Text = $"Lớp {this._courseNumber} - {this.getCourseType(value)}";
             }
         }
@@ -85,28 +89,18 @@ namespace vlute_course_manager.controls
             set
             {
                 this._currentMemberCount = value;
-                this.labelMemberCount.Text = $"{value}/{this._maxMemberCount}";
-
+                this.updateUIMemberCount(value, this.maxMemberCount);
             }
         }
 
         [Category("Course info")]
-        public int maxMemberCount 
+        public int maxMemberCount
         {
             get { return this._maxMemberCount; }
             set
             {
                 this._maxMemberCount = value;
-
-                if (value < this._currentMemberCount)
-                {
-                    this.labelMemberCount.ForeColor = Color.Red;
-                } else
-                {
-                    this.labelMemberCount.ForeColor = Color.Black;
-                }
-
-                this.labelMemberCount.Text = $"{this._currentMemberCount}/{value}";
+                this.updateUIMemberCount(this.currentMemberCount, value);
             }
         }
 
@@ -117,7 +111,18 @@ namespace vlute_course_manager.controls
             set
             {
                 this._subjectName = value;
-                this.labelCourseSubject.Text = value;
+                this.labelCourseSubject.Text = $"{this.subjectCode} - {this.subjectName}";
+            }
+        }
+
+        [Category("Course info")]
+        public string subjectCode
+        {
+            get { return this._subjectCode; }
+            set
+            {
+                this._subjectCode = value;
+                this.labelCourseSubject.Text = $"{this.subjectCode} - {this.subjectName}";
             }
         }
 
@@ -144,11 +149,32 @@ namespace vlute_course_manager.controls
                 this.labelCourseCreditCount.Text = $"LT: {this._theoryCreditCount}\tTH: {value}";
             }
         }
-
-
-
         #endregion
 
+        private void buttonViewCourse_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CourseDetailForm courseDetailForm = new CourseDetailForm(this.courseId);
+            courseDetailForm.ShowDialog();
+            this.Show();
+        }
 
+        private void updateUIMemberCount(int currentMemberCount, int maxMemberCount)
+        {
+            if (currentMemberCount >= maxMemberCount)
+            {
+                this.progressBarMemberCount.Text = $"{currentMemberCount}/{maxMemberCount}";
+                this.labelMemberCountWarning.Text = "Đã đầy";
+            }
+            else
+            {
+                this.progressBarMemberCount.Text = $"{currentMemberCount}/{maxMemberCount}";
+                this.labelMemberCountWarning.Text = "";
+            }
+
+            // Update progress bar
+            this.progressBarMemberCount.Maximum = maxMemberCount;
+            this.progressBarMemberCount.Value = currentMemberCount;
+        }
     }
 }

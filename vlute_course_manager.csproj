@@ -347,6 +347,12 @@
     <Compile Include="controls\CourseItem.Designer.cs">
       <DependentUpon>CourseItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="forms\CreateMajor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CreateMajor.Designer.cs">
+      <DependentUpon>CreateMajor.cs</DependentUpon>
+    </Compile>
     <Compile Include="controls\EnrollSessionItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -358,6 +364,24 @@
     </Compile>
     <Compile Include="controls\ImageItem.Designer.cs">
       <DependentUpon>ImageItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\NavigationItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\NavigationItem.Designer.cs">
+      <DependentUpon>NavigationItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UserAccountItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="controls\UserAccountItem.Designer.cs">
+      <DependentUpon>UserAccountItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ChangeCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ChangeCourse.Designer.cs">
+      <DependentUpon>ChangeCourse.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\CourseDetailForm.cs">
       <SubType>Form</SubType>
@@ -376,6 +400,12 @@
     </Compile>
     <Compile Include="forms\CreateSubjectForm.Designer.cs">
       <DependentUpon>CreateSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\EnrollHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\EnrollHistoryForm.Designer.cs">
+      <DependentUpon>EnrollHistoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="forms\GiveAccountForm.cs">
       <SubType>Form</SubType>
@@ -407,11 +437,23 @@
     <EmbeddedResource Include="controls\CourseItem.resx">
       <DependentUpon>CourseItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="forms\CreateMajor.resx">
+      <DependentUpon>CreateMajor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="controls\EnrollSessionItem.resx">
       <DependentUpon>EnrollSessionItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="controls\ImageItem.resx">
       <DependentUpon>ImageItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\NavigationItem.resx">
+      <DependentUpon>NavigationItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\UserAccountItem.resx">
+      <DependentUpon>UserAccountItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\ChangeCourse.resx">
+      <DependentUpon>ChangeCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CourseDetailForm.resx">
       <DependentUpon>CourseDetailForm.cs</DependentUpon>
@@ -421,6 +463,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forms\CreateSubjectForm.resx">
       <DependentUpon>CreateSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\EnrollHistoryForm.resx">
+      <DependentUpon>EnrollHistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="forms\GiveAccountForm.resx">
       <DependentUpon>GiveAccountForm.cs</DependentUpon>

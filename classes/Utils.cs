@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace vlute_course_manager.classes
 {
@@ -43,5 +45,26 @@ namespace vlute_course_manager.classes
 
             return null;
         }
+
+        public void renderComboBox(string label, DataRowCollection dataRowCollection, string rowName, ComboBox comboBox)
+        {
+            comboBox.Items.Clear();
+            comboBox.Items.Add(label);
+            comboBox.SelectedIndex = 0;
+
+            foreach (DataRow item in dataRowCollection)
+            {
+                comboBox.Items.Add(item[rowName].ToString());
+            }
+        }
+
+        public string getRoleTitle(string role)
+        {
+            if (role.Equals("student")) return "Sinh viên";
+            if (role.Equals("teacher")) return "Giảng viên";
+
+            return "Quản trị viên";
+        }
+
     }
 }

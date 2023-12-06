@@ -174,9 +174,10 @@ namespace vlute_course_manager
                 string updateColumnQuery = "";
 
                 bool isChangeFullname = !oldFullname.Equals(newFullname);
-                bool isChangeAvatar = Convert.ToBoolean(newAvatar);
+                bool isChangeAvatar = newAvatar.Length != 0;
 
                 if (isChangeFullname) updateColumnQuery += $" `fullname` = '{newFullname}' ";
+                if (isChangeAvatar && isChangeFullname) updateColumnQuery += $",";
                 if (isChangeAvatar) updateColumnQuery += $" `avatar` = '{newAvatarFormat}' ";
                 if (updateColumnQuery.Length != 0)
                 {
@@ -269,5 +270,9 @@ namespace vlute_course_manager
 
         #endregion
 
+        private void ProfileForm_Paint(object sender, PaintEventArgs e)
+        {
+            resetForm();
+        }
     }
 }

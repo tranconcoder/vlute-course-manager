@@ -4,22 +4,22 @@ USE `vlute_course_manager`;
 -- Thêm ràng buộc toàn vẹn
 ALTER TABLE `vlute_course_manager`.`user`
 	ADD CONSTRAINT check_user_accountType CHECK(`role` IN ("student", "teacher", "admin")),
-	ADD CONSTRAINT check_user_accountType_studentId CHECK(`role` = "student" AND LENGTH(`student_id`) = 8 OR `role` = "teacher");
+	ADD CONSTRAINT check_user_accountType_studentId CHECK(`role` = "student" AND LENGTH(`student_id`) = 8 OR `role` IN ("teacher", "admin"));
     
 ALTER TABLE `vlute_course_manager`.`enroll_session`
 	ADD CONSTRAINT check_enrollSession_dateRange CHECK(`date_range` > 0);
 
 -- Major
-INSERT INTO `vlute_course_manager`.`major`(major_title) VALUES ("Công nghệ thông tin");
+INSERT INTO `vlute_course_manager`.`major`(major_title) VALUES
+	("Công nghệ thông tin");
 
 INSERT INTO `vlute_course_manager`.`authenticate`(username, password) VALUES
-	("conkgytt", "$2a$11$PtC5OUnz9XegCzRmi7toWee5GJNTNf4srQyvXeMgWdFXRec1azMNW");
+	("conkgytt", "$2a$11$PtC5OUnz9XegCzRmi7toWee5GJNTNf4srQyvXeMgWdFXRec1azMNW"),
+    ("ngocnga", "$2a$11$PtC5OUnz9XegCzRmi7toWee5GJNTNf4srQyvXeMgWdFXRec1azMNW");
 
-INSERT INTO `vlute_course_manager`.`authenticate`(username, password) VALUES 
-	("teacheraccount", "passforteacheraccount");
-INSERT INTO `vlute_course_manager`.`user`(user_id, student_id, role, fullname, major_id) VALUES 
-	(1, "22004015", "student", "Trần Văn Còn", 1),
-	(2, NULL, "teacher", "Ngọc Nga", 1);
+INSERT INTO `vlute_course_manager`.`user`(user_id, student_id, `role`, fullname, major_id) VALUES 
+	(1, "22004015", "admin", "Trần Văn Còn", 1),
+    (2, NULL, "student", "Nguyễn Thị Mỹ Nga", 1);
 
 -- Nhập danh sách môn học
 INSERT INTO `vlute_course_manager`.`subject` (major_id, subject_name, subject_code, theory_credit_count, practice_credit_count) VALUES
@@ -122,8 +122,6 @@ INSERT INTO `vlute_course_manager`.`course`(subject_id, teacher_id, enroll_sessi
 	(1, 2, 1, "Khóa học CTDL&GT", 1, ""),
     (3, 2, 1, "Object Oriented Programming", 10, ""),
     (4, 2, 2, "Thuật toán", 30, "");
-
-
     
 -- Học phần được phép đăng ký cho đợt
 INSERT INTO `vlute_course_manager`.`course_session`(course_id, enroll_session_id) VALUES
@@ -144,9 +142,11 @@ SELECT * FROM `vlute_course_manager`.`user`;
 select * from `vlute_course_manager`.`authenticate`;
 select * from `vlute_course_manager`.`subject`;
 select * from `vlute_course_manager`.`major`;
+select * from `vlute_course_manager`.`course_image`;
 
 USE `vlute_course_manager`;
 call searchCourse("", 1);
+call selectCourseEnrolled("22004015", 1);
 
 call selectUserProfile(1);
 

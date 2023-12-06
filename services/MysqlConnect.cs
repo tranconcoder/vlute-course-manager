@@ -59,5 +59,10 @@ namespace vlute_course_manager
 
             return appliedColumnCount;
         }
+
+        public void CloseConnection()
+        {
+            _connection.Close();
+        }
     }
 }

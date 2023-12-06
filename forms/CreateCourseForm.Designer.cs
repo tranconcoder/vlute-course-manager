@@ -31,14 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateCourseForm));
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label4 = new System.Windows.Forms.Label();
+            this.numericUpDownDateRange = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.labelSessionWarning = new System.Windows.Forms.Label();
             this.flowLayoutPanelEnrollSession = new System.Windows.Forms.FlowLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker2 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dateTimePickerStart = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.buttonAddSession = new Guna.UI2.WinForms.Guna2Button();
+            this.textBoxSessionName = new Guna.UI2.WinForms.Guna2TextBox();
             this.buttonReset = new Guna.UI2.WinForms.Guna2Button();
             this.buttonSubmit = new Guna.UI2.WinForms.Guna2Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -47,6 +47,12 @@
             this.buttonAddImage = new Guna.UI2.WinForms.Guna2Button();
             this.flowLayoutPanelImageList = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.labelEnrollSessionWarning = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBoxEnrollSession = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.labelMajorWarning = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxMajor = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.numbericUpDownMaxMemberCount = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.labelSubjectWarning = new System.Windows.Forms.Label();
@@ -59,14 +65,12 @@
             this.textBoxCourseName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxMajor = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelMajorWarning = new System.Windows.Forms.Label();
             this.imageItemThumb = new vlute_course_manager.controls.ImageItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDateRange)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numbericUpDownMaxMemberCount)).BeginInit();
             this.SuspendLayout();
@@ -89,14 +93,14 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.label4);
+            this.splitContainer1.Panel1.Controls.Add(this.numericUpDownDateRange);
+            this.splitContainer1.Panel1.Controls.Add(this.labelSessionWarning);
             this.splitContainer1.Panel1.Controls.Add(this.flowLayoutPanelEnrollSession);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.guna2DateTimePicker2);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.guna2DateTimePicker1);
-            this.splitContainer1.Panel1.Controls.Add(this.guna2Button1);
-            this.splitContainer1.Panel1.Controls.Add(this.guna2TextBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.dateTimePickerStart);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonAddSession);
+            this.splitContainer1.Panel1.Controls.Add(this.textBoxSessionName);
             this.splitContainer1.Panel1.Padding = new System.Windows.Forms.Padding(20);
             // 
             // splitContainer1.Panel2
@@ -112,131 +116,138 @@
             this.splitContainer1.Panel2.Controls.Add(this.buttonAddImage);
             this.splitContainer1.Panel2.Controls.Add(this.flowLayoutPanelImageList);
             this.splitContainer1.Panel2.Controls.Add(this.guna2Panel1);
-            this.splitContainer1.Panel2.Controls.Add(this.label5);
             this.splitContainer1.Panel2.Padding = new System.Windows.Forms.Padding(20);
             this.splitContainer1.Size = new System.Drawing.Size(2030, 1171);
             this.splitContainer1.SplitterDistance = 700;
             this.splitContainer1.TabIndex = 1;
             // 
-            // label4
+            // numericUpDownDateRange
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(20, 503);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 29);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Ngày kết thúc";
+            this.numericUpDownDateRange.BackColor = System.Drawing.Color.Transparent;
+            this.numericUpDownDateRange.BorderRadius = 10;
+            this.numericUpDownDateRange.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numericUpDownDateRange.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.numericUpDownDateRange.Location = new System.Drawing.Point(20, 360);
+            this.numericUpDownDateRange.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.numericUpDownDateRange.Maximum = new decimal(new int[] {
+            365,
+            0,
+            0,
+            0});
+            this.numericUpDownDateRange.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownDateRange.Name = "numericUpDownDateRange";
+            this.numericUpDownDateRange.Size = new System.Drawing.Size(660, 80);
+            this.numericUpDownDateRange.TabIndex = 9;
+            this.numericUpDownDateRange.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // labelSessionWarning
+            // 
+            this.labelSessionWarning.AutoSize = true;
+            this.labelSessionWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelSessionWarning.Location = new System.Drawing.Point(15, 114);
+            this.labelSessionWarning.Name = "labelSessionWarning";
+            this.labelSessionWarning.Size = new System.Drawing.Size(285, 25);
+            this.labelSessionWarning.TabIndex = 8;
+            this.labelSessionWarning.Text = "Vui lòng nhập tên phiên mới!";
             // 
             // flowLayoutPanelEnrollSession
             // 
             this.flowLayoutPanelEnrollSession.AutoScroll = true;
-            this.flowLayoutPanelEnrollSession.Location = new System.Drawing.Point(20, 547);
+            this.flowLayoutPanelEnrollSession.Location = new System.Drawing.Point(20, 609);
             this.flowLayoutPanelEnrollSession.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanelEnrollSession.Name = "flowLayoutPanelEnrollSession";
-            this.flowLayoutPanelEnrollSession.Size = new System.Drawing.Size(660, 604);
+            this.flowLayoutPanelEnrollSession.Size = new System.Drawing.Size(660, 542);
             this.flowLayoutPanelEnrollSession.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 250);
+            this.label3.Location = new System.Drawing.Point(20, 325);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 29);
+            this.label3.Size = new System.Drawing.Size(109, 29);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Ngày kết thúc";
-            // 
-            // guna2DateTimePicker2
-            // 
-            this.guna2DateTimePicker2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker2.BorderRadius = 10;
-            this.guna2DateTimePicker2.Checked = true;
-            this.guna2DateTimePicker2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(222)))), ((int)(((byte)(123)))));
-            this.guna2DateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.guna2DateTimePicker2.ForeColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker2.Location = new System.Drawing.Point(20, 293);
-            this.guna2DateTimePicker2.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2DateTimePicker2.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.MinDate = new System.DateTime(2023, 11, 21, 0, 0, 0, 0);
-            this.guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            this.guna2DateTimePicker2.Size = new System.Drawing.Size(660, 80);
-            this.guna2DateTimePicker2.TabIndex = 4;
-            this.guna2DateTimePicker2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
-            this.guna2DateTimePicker2.Value = new System.DateTime(2023, 11, 21, 21, 30, 37, 0);
+            this.label3.Text = "Ngày mở";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 113);
+            this.label2.Location = new System.Drawing.Point(20, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 29);
             this.label2.TabIndex = 3;
             this.label2.Text = "Ngày bắt đầu";
             // 
-            // guna2DateTimePicker1
+            // dateTimePickerStart
             // 
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.BorderRadius = 10;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(222)))), ((int)(((byte)(123)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.guna2DateTimePicker1.ForeColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(20, 156);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(2023, 11, 21, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(660, 80);
-            this.guna2DateTimePicker1.TabIndex = 2;
-            this.guna2DateTimePicker1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2DateTimePicker1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 11, 21, 21, 30, 37, 0);
+            this.dateTimePickerStart.BackColor = System.Drawing.Color.Transparent;
+            this.dateTimePickerStart.BorderRadius = 10;
+            this.dateTimePickerStart.Checked = true;
+            this.dateTimePickerStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(222)))), ((int)(((byte)(123)))));
+            this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.dateTimePickerStart.ForeColor = System.Drawing.Color.White;
+            this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(20, 219);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(0);
+            this.dateTimePickerStart.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dateTimePickerStart.MinDate = new System.DateTime(2023, 11, 21, 0, 0, 0, 0);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(660, 80);
+            this.dateTimePickerStart.TabIndex = 2;
+            this.dateTimePickerStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.dateTimePickerStart.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixel;
+            this.dateTimePickerStart.Value = new System.DateTime(2023, 11, 21, 21, 30, 37, 0);
             // 
-            // guna2Button1
+            // buttonAddSession
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(190)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(20, 402);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(660, 80);
-            this.guna2Button1.TabIndex = 1;
-            this.guna2Button1.Text = "Thêm phiên đăng ký";
+            this.buttonAddSession.BorderRadius = 10;
+            this.buttonAddSession.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAddSession.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonAddSession.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonAddSession.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonAddSession.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(116)))), ((int)(((byte)(190)))));
+            this.buttonAddSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.buttonAddSession.ForeColor = System.Drawing.Color.White;
+            this.buttonAddSession.Location = new System.Drawing.Point(20, 477);
+            this.buttonAddSession.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonAddSession.Name = "buttonAddSession";
+            this.buttonAddSession.Size = new System.Drawing.Size(660, 80);
+            this.buttonAddSession.TabIndex = 1;
+            this.buttonAddSession.Text = "Thêm phiên đăng ký";
+            this.buttonAddSession.Click += new System.EventHandler(this.buttonAddSession_Click);
             // 
-            // guna2TextBox1
+            // textBoxSessionName
             // 
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Tên lớp học phần";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(20, 20);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(660, 80);
-            this.guna2TextBox1.TabIndex = 0;
+            this.textBoxSessionName.BorderRadius = 10;
+            this.textBoxSessionName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.textBoxSessionName.DefaultText = "";
+            this.textBoxSessionName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.textBoxSessionName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.textBoxSessionName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxSessionName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.textBoxSessionName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxSessionName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.textBoxSessionName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.textBoxSessionName.Location = new System.Drawing.Point(20, 20);
+            this.textBoxSessionName.Margin = new System.Windows.Forms.Padding(0);
+            this.textBoxSessionName.Name = "textBoxSessionName";
+            this.textBoxSessionName.PasswordChar = '\0';
+            this.textBoxSessionName.PlaceholderText = "";
+            this.textBoxSessionName.SelectedText = "";
+            this.textBoxSessionName.Size = new System.Drawing.Size(660, 80);
+            this.textBoxSessionName.TabIndex = 0;
+            this.textBoxSessionName.TextChanged += new System.EventHandler(this.textBoxSessionName_TextChanged);
             // 
             // buttonReset
             // 
@@ -248,7 +259,7 @@
             this.buttonReset.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
             this.buttonReset.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonReset.ForeColor = System.Drawing.Color.Black;
-            this.buttonReset.Location = new System.Drawing.Point(866, 1405);
+            this.buttonReset.Location = new System.Drawing.Point(866, 1375);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(200, 60);
             this.buttonReset.TabIndex = 14;
@@ -263,7 +274,7 @@
             this.buttonSubmit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.buttonSubmit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.buttonSubmit.ForeColor = System.Drawing.Color.White;
-            this.buttonSubmit.Location = new System.Drawing.Point(1086, 1405);
+            this.buttonSubmit.Location = new System.Drawing.Point(1086, 1375);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(200, 60);
             this.buttonSubmit.TabIndex = 13;
@@ -287,7 +298,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.label13.Location = new System.Drawing.Point(15, 1077);
+            this.label13.Location = new System.Drawing.Point(15, 1047);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(82, 25);
             this.label13.TabIndex = 0;
@@ -304,7 +315,7 @@
             this.textBoxDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxDescription.Location = new System.Drawing.Point(20, 1108);
+            this.textBoxDescription.Location = new System.Drawing.Point(20, 1092);
             this.textBoxDescription.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.textBoxDescription.Multiline = true;
             this.textBoxDescription.Name = "textBoxDescription";
@@ -336,7 +347,7 @@
             this.flowLayoutPanelImageList.AutoScroll = true;
             this.flowLayoutPanelImageList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flowLayoutPanelImageList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanelImageList.Location = new System.Drawing.Point(405, 649);
+            this.flowLayoutPanelImageList.Location = new System.Drawing.Point(405, 638);
             this.flowLayoutPanelImageList.Name = "flowLayoutPanelImageList";
             this.flowLayoutPanelImageList.Size = new System.Drawing.Size(881, 413);
             this.flowLayoutPanelImageList.TabIndex = 5;
@@ -344,6 +355,9 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.Controls.Add(this.labelEnrollSessionWarning);
+            this.guna2Panel1.Controls.Add(this.label10);
+            this.guna2Panel1.Controls.Add(this.comboBoxEnrollSession);
             this.guna2Panel1.Controls.Add(this.labelMajorWarning);
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.comboBoxMajor);
@@ -359,19 +373,103 @@
             this.guna2Panel1.Controls.Add(this.textBoxCourseName);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel1.Location = new System.Drawing.Point(20, 69);
+            this.guna2Panel1.Location = new System.Drawing.Point(20, 20);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Padding = new System.Windows.Forms.Padding(20);
-            this.guna2Panel1.Size = new System.Drawing.Size(1266, 463);
+            this.guna2Panel1.Size = new System.Drawing.Size(1266, 543);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // labelEnrollSessionWarning
+            // 
+            this.labelEnrollSessionWarning.AutoSize = true;
+            this.labelEnrollSessionWarning.BackColor = System.Drawing.Color.Transparent;
+            this.labelEnrollSessionWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelEnrollSessionWarning.Location = new System.Drawing.Point(180, 110);
+            this.labelEnrollSessionWarning.Name = "labelEnrollSessionWarning";
+            this.labelEnrollSessionWarning.Size = new System.Drawing.Size(316, 25);
+            this.labelEnrollSessionWarning.TabIndex = 26;
+            this.labelEnrollSessionWarning.Text = "Vui lòng nhập tên lớp học phần!";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(7, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 26);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Phiên đăng ký";
+            // 
+            // comboBoxEnrollSession
+            // 
+            this.comboBoxEnrollSession.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxEnrollSession.BorderRadius = 10;
+            this.comboBoxEnrollSession.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxEnrollSession.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEnrollSession.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxEnrollSession.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxEnrollSession.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxEnrollSession.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxEnrollSession.IntegralHeight = false;
+            this.comboBoxEnrollSession.ItemHeight = 64;
+            this.comboBoxEnrollSession.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.comboBoxEnrollSession.Location = new System.Drawing.Point(185, 30);
+            this.comboBoxEnrollSession.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxEnrollSession.Name = "comboBoxEnrollSession";
+            this.comboBoxEnrollSession.Size = new System.Drawing.Size(1061, 70);
+            this.comboBoxEnrollSession.TabIndex = 24;
+            this.comboBoxEnrollSession.SelectedIndexChanged += new System.EventHandler(this.comboBoxEnrollSession_SelectedIndexChanged);
+            // 
+            // labelMajorWarning
+            // 
+            this.labelMajorWarning.AutoSize = true;
+            this.labelMajorWarning.BackColor = System.Drawing.Color.Transparent;
+            this.labelMajorWarning.ForeColor = System.Drawing.Color.Red;
+            this.labelMajorWarning.Location = new System.Drawing.Point(180, 232);
+            this.labelMajorWarning.Name = "labelMajorWarning";
+            this.labelMajorWarning.Size = new System.Drawing.Size(316, 25);
+            this.labelMajorWarning.TabIndex = 23;
+            this.labelMajorWarning.Text = "Vui lòng nhập tên lớp học phần!";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(3, 176);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(162, 26);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Chuyên ngành";
+            // 
+            // comboBoxMajor
+            // 
+            this.comboBoxMajor.BackColor = System.Drawing.Color.Transparent;
+            this.comboBoxMajor.BorderRadius = 10;
+            this.comboBoxMajor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboBoxMajor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxMajor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxMajor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboBoxMajor.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboBoxMajor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboBoxMajor.IntegralHeight = false;
+            this.comboBoxMajor.ItemHeight = 64;
+            this.comboBoxMajor.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.comboBoxMajor.Location = new System.Drawing.Point(185, 151);
+            this.comboBoxMajor.Margin = new System.Windows.Forms.Padding(0);
+            this.comboBoxMajor.Name = "comboBoxMajor";
+            this.comboBoxMajor.Size = new System.Drawing.Size(1061, 70);
+            this.comboBoxMajor.TabIndex = 21;
+            this.comboBoxMajor.SelectedIndexChanged += new System.EventHandler(this.comboBoxMajor_SelectedIndexChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(621, 335);
+            this.label12.Location = new System.Drawing.Point(621, 448);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(167, 26);
             this.label12.TabIndex = 20;
@@ -383,7 +481,7 @@
             this.numbericUpDownMaxMemberCount.BorderRadius = 10;
             this.numbericUpDownMaxMemberCount.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numbericUpDownMaxMemberCount.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.numbericUpDownMaxMemberCount.Location = new System.Drawing.Point(797, 306);
+            this.numbericUpDownMaxMemberCount.Location = new System.Drawing.Point(797, 419);
             this.numbericUpDownMaxMemberCount.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.numbericUpDownMaxMemberCount.Maximum = new decimal(new int[] {
             300,
@@ -409,19 +507,18 @@
             this.labelSubjectWarning.AutoSize = true;
             this.labelSubjectWarning.BackColor = System.Drawing.Color.Transparent;
             this.labelSubjectWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelSubjectWarning.Location = new System.Drawing.Point(135, 391);
+            this.labelSubjectWarning.Location = new System.Drawing.Point(135, 504);
             this.labelSubjectWarning.Name = "labelSubjectWarning";
             this.labelSubjectWarning.Size = new System.Drawing.Size(237, 25);
             this.labelSubjectWarning.TabIndex = 12;
             this.labelSubjectWarning.Text = "Vui lòng chọn môn học!";
-            this.labelSubjectWarning.Visible = false;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 335);
+            this.label9.Location = new System.Drawing.Point(17, 448);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 26);
             this.label9.TabIndex = 11;
@@ -440,7 +537,7 @@
             this.comboBoxSubject.IntegralHeight = false;
             this.comboBoxSubject.ItemHeight = 64;
             this.comboBoxSubject.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.comboBoxSubject.Location = new System.Drawing.Point(140, 306);
+            this.comboBoxSubject.Location = new System.Drawing.Point(140, 419);
             this.comboBoxSubject.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxSubject.Name = "comboBoxSubject";
             this.comboBoxSubject.Size = new System.Drawing.Size(450, 70);
@@ -452,31 +549,29 @@
             this.labelTeacherWarning.AutoSize = true;
             this.labelTeacherWarning.BackColor = System.Drawing.Color.Transparent;
             this.labelTeacherWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelTeacherWarning.Location = new System.Drawing.Point(792, 260);
+            this.labelTeacherWarning.Location = new System.Drawing.Point(792, 373);
             this.labelTeacherWarning.Name = "labelTeacherWarning";
             this.labelTeacherWarning.Size = new System.Drawing.Size(254, 25);
             this.labelTeacherWarning.TabIndex = 9;
             this.labelTeacherWarning.Text = "Vui lòng chọn giảng viên!";
-            this.labelTeacherWarning.Visible = false;
             // 
             // labelCourseNameWarning
             // 
             this.labelCourseNameWarning.AutoSize = true;
             this.labelCourseNameWarning.BackColor = System.Drawing.Color.Transparent;
             this.labelCourseNameWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelCourseNameWarning.Location = new System.Drawing.Point(135, 260);
+            this.labelCourseNameWarning.Location = new System.Drawing.Point(135, 373);
             this.labelCourseNameWarning.Name = "labelCourseNameWarning";
             this.labelCourseNameWarning.Size = new System.Drawing.Size(316, 25);
             this.labelCourseNameWarning.TabIndex = 8;
             this.labelCourseNameWarning.Text = "Vui lòng nhập tên lớp học phần!";
-            this.labelCourseNameWarning.Visible = false;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(648, 198);
+            this.label7.Location = new System.Drawing.Point(648, 311);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 26);
             this.label7.TabIndex = 7;
@@ -494,7 +589,7 @@
             this.comboBoxTeacher.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboBoxTeacher.IntegralHeight = false;
             this.comboBoxTeacher.ItemHeight = 64;
-            this.comboBoxTeacher.Location = new System.Drawing.Point(797, 175);
+            this.comboBoxTeacher.Location = new System.Drawing.Point(797, 288);
             this.comboBoxTeacher.Margin = new System.Windows.Forms.Padding(0);
             this.comboBoxTeacher.Name = "comboBoxTeacher";
             this.comboBoxTeacher.Size = new System.Drawing.Size(450, 70);
@@ -514,7 +609,7 @@
             this.textBoxCourseName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.textBoxCourseName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.textBoxCourseName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.textBoxCourseName.Location = new System.Drawing.Point(140, 175);
+            this.textBoxCourseName.Location = new System.Drawing.Point(140, 288);
             this.textBoxCourseName.Margin = new System.Windows.Forms.Padding(0);
             this.textBoxCourseName.Name = "textBoxCourseName";
             this.textBoxCourseName.PasswordChar = '\0';
@@ -529,7 +624,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(17, 198);
+            this.label6.Location = new System.Drawing.Point(17, 311);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(87, 26);
             this.label6.TabIndex = 4;
@@ -540,61 +635,18 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
-            this.label5.Location = new System.Drawing.Point(23, 20);
+            this.label5.Location = new System.Drawing.Point(752, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(208, 36);
             this.label5.TabIndex = 0;
             this.label5.Text = "Tạo khóa học";
-            // 
-            // comboBoxMajor
-            // 
-            this.comboBoxMajor.BackColor = System.Drawing.Color.Transparent;
-            this.comboBoxMajor.BorderRadius = 10;
-            this.comboBoxMajor.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboBoxMajor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxMajor.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxMajor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboBoxMajor.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboBoxMajor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboBoxMajor.IntegralHeight = false;
-            this.comboBoxMajor.ItemHeight = 64;
-            this.comboBoxMajor.ItemsAppearance.SelectedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.comboBoxMajor.Location = new System.Drawing.Point(185, 20);
-            this.comboBoxMajor.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBoxMajor.Name = "comboBoxMajor";
-            this.comboBoxMajor.Size = new System.Drawing.Size(1061, 70);
-            this.comboBoxMajor.TabIndex = 21;
-            this.comboBoxMajor.SelectedIndexChanged += new System.EventHandler(this.comboBoxMajor_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Inter", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 44);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 26);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Chuyên ngành";
-            // 
-            // labelMajorWarning
-            // 
-            this.labelMajorWarning.AutoSize = true;
-            this.labelMajorWarning.BackColor = System.Drawing.Color.Transparent;
-            this.labelMajorWarning.ForeColor = System.Drawing.Color.Red;
-            this.labelMajorWarning.Location = new System.Drawing.Point(180, 101);
-            this.labelMajorWarning.Name = "labelMajorWarning";
-            this.labelMajorWarning.Size = new System.Drawing.Size(316, 25);
-            this.labelMajorWarning.TabIndex = 23;
-            this.labelMajorWarning.Text = "Vui lòng nhập tên lớp học phần!";
-            this.labelMajorWarning.Visible = false;
             // 
             // imageItemThumb
             // 
             this.imageItemThumb.BackColor = System.Drawing.Color.Transparent;
             this.imageItemThumb.image = "D:\\Workspace\\.NET\\vlute-course-manager\\assets\\images\\formHome\\courseIcon.png";
             this.imageItemThumb.isEditMode = true;
-            this.imageItemThumb.Location = new System.Drawing.Point(20, 649);
+            this.imageItemThumb.Location = new System.Drawing.Point(20, 638);
             this.imageItemThumb.Name = "imageItemThumb";
             this.imageItemThumb.onRemoveImage = null;
             this.imageItemThumb.Padding = new System.Windows.Forms.Padding(10);
@@ -609,16 +661,19 @@
             this.ClientSize = new System.Drawing.Size(2054, 1229);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CreateCourseForm";
             this.Text = "Tạo tài liệu";
             this.Load += new System.EventHandler(this.CreateCourseForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateCourseForm_Paint);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDateRange)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numbericUpDownMaxMemberCount)).EndInit();
@@ -631,13 +686,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2TextBox textBoxSessionName;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerStart;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker2;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button buttonAddSession;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelEnrollSession;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
@@ -664,5 +717,10 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2ComboBox comboBoxMajor;
         private System.Windows.Forms.Label labelMajorWarning;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2ComboBox comboBoxEnrollSession;
+        private System.Windows.Forms.Label labelEnrollSessionWarning;
+        private System.Windows.Forms.Label labelSessionWarning;
+        private Guna.UI2.WinForms.Guna2NumericUpDown numericUpDownDateRange;
     }
 }

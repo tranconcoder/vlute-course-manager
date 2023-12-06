@@ -30,9 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CourseItem));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.buttonRemove = new Guna.UI2.WinForms.Guna2Button();
+            this.buttonChange = new Guna.UI2.WinForms.Guna2Button();
             this.buttonViewCourse = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonEnroll = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBoxThumb = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.labelMemberCountWarning = new System.Windows.Forms.Label();
             this.progressBarMemberCount = new Guna.UI2.WinForms.Guna2ProgressBar();
@@ -47,7 +49,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelCourseName = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThumb)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -60,15 +62,50 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderRadius = 20;
+            this.guna2Panel1.Controls.Add(this.buttonRemove);
+            this.guna2Panel1.Controls.Add(this.buttonChange);
             this.guna2Panel1.Controls.Add(this.buttonViewCourse);
-            this.guna2Panel1.Controls.Add(this.guna2Button1);
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.buttonEnroll);
+            this.guna2Panel1.Controls.Add(this.pictureBoxThumb);
             this.guna2Panel1.Controls.Add(this.panel1);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1420, 250);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.BorderRadius = 10;
+            this.buttonRemove.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRemove.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonRemove.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonRemove.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonRemove.FillColor = System.Drawing.Color.Red;
+            this.buttonRemove.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonRemove.ForeColor = System.Drawing.Color.White;
+            this.buttonRemove.Location = new System.Drawing.Point(1237, 182);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(160, 47);
+            this.buttonRemove.TabIndex = 9;
+            this.buttonRemove.Text = "Xóa";
+            // 
+            // buttonChange
+            // 
+            this.buttonChange.BorderRadius = 10;
+            this.buttonChange.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChange.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonChange.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonChange.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonChange.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.buttonChange.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonChange.ForeColor = System.Drawing.Color.White;
+            this.buttonChange.Location = new System.Drawing.Point(1237, 129);
+            this.buttonChange.Name = "buttonChange";
+            this.buttonChange.Size = new System.Drawing.Size(160, 47);
+            this.buttonChange.TabIndex = 8;
+            this.buttonChange.Text = "Sửa";
+            this.buttonChange.Click += new System.EventHandler(this.buttonChange_Click);
             // 
             // buttonViewCourse
             // 
@@ -77,40 +114,41 @@
             this.buttonViewCourse.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.buttonViewCourse.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.buttonViewCourse.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.buttonViewCourse.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(196)))), ((int)(((byte)(54)))));
+            this.buttonViewCourse.FillColor = System.Drawing.Color.LimeGreen;
             this.buttonViewCourse.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.buttonViewCourse.ForeColor = System.Drawing.Color.White;
-            this.buttonViewCourse.Location = new System.Drawing.Point(1237, 129);
+            this.buttonViewCourse.Location = new System.Drawing.Point(1237, 23);
             this.buttonViewCourse.Name = "buttonViewCourse";
             this.buttonViewCourse.Size = new System.Drawing.Size(160, 47);
             this.buttonViewCourse.TabIndex = 7;
             this.buttonViewCourse.Text = "Xem";
             this.buttonViewCourse.Click += new System.EventHandler(this.buttonViewCourse_Click);
             // 
-            // guna2Button1
+            // buttonEnroll
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1237, 65);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(160, 47);
-            this.guna2Button1.TabIndex = 6;
-            this.guna2Button1.Text = "Đăng ký";
+            this.buttonEnroll.BorderRadius = 10;
+            this.buttonEnroll.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.buttonEnroll.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.buttonEnroll.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buttonEnroll.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.buttonEnroll.Font = new System.Drawing.Font("Inter", 23F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.buttonEnroll.ForeColor = System.Drawing.Color.White;
+            this.buttonEnroll.Location = new System.Drawing.Point(1237, 76);
+            this.buttonEnroll.Name = "buttonEnroll";
+            this.buttonEnroll.Size = new System.Drawing.Size(160, 47);
+            this.buttonEnroll.TabIndex = 6;
+            this.buttonEnroll.Text = "Đăng ký";
+            this.buttonEnroll.Click += new System.EventHandler(this.buttonEnroll_Click);
             // 
-            // pictureBox1
+            // pictureBoxThumb
             // 
-            this.pictureBox1.Image = global::vlute_course_manager.Properties.Resources.courseIcon;
-            this.pictureBox1.Location = new System.Drawing.Point(23, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 204);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxThumb.Image = global::vlute_course_manager.Properties.Resources.courseIcon;
+            this.pictureBoxThumb.Location = new System.Drawing.Point(23, 23);
+            this.pictureBoxThumb.Name = "pictureBoxThumb";
+            this.pictureBoxThumb.Size = new System.Drawing.Size(204, 204);
+            this.pictureBoxThumb.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBoxThumb.TabIndex = 4;
+            this.pictureBoxThumb.TabStop = false;
             // 
             // panel1
             // 
@@ -268,7 +306,7 @@
             this.Padding = new System.Windows.Forms.Padding(20);
             this.Size = new System.Drawing.Size(1420, 250);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxThumb)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -284,8 +322,8 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Button buttonViewCourse;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button buttonEnroll;
+        private System.Windows.Forms.PictureBox pictureBoxThumb;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelMemberCountWarning;
         private Guna.UI2.WinForms.Guna2ProgressBar progressBarMemberCount;
@@ -299,5 +337,7 @@
         private System.Windows.Forms.Label labelTeacher;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label labelCourseName;
+        private Guna.UI2.WinForms.Guna2Button buttonChange;
+        private Guna.UI2.WinForms.Guna2Button buttonRemove;
     }
 }

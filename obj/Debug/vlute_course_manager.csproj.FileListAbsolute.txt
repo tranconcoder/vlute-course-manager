@@ -61,8 +61,12 @@ D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.Ass
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.CourseItem.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.EnrollSessionItem.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.ImageItem.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.NavigationItem.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.UserAccountItem.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.CourseDetailForm.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.CreateCourseForm.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.CreateSubjectForm.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.GiveAccountForm.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.LoginForm.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.HomeForm.resources
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.ProfileForm.resources
@@ -138,5 +142,6 @@ D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.Fod
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.csproj.CopyComplete
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.exe
 D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.pdb
-D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.CreateSubjectForm.resources
-D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.GiveAccountForm.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.ChangeCourse.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.forms.EnrollHistoryForm.resources
+D:\Workspace\.NET\vlute-course-manager\obj\Debug\vlute_course_manager.controls.CreateMajorForm.resources

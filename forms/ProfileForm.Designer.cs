@@ -407,6 +407,7 @@
             this.Name = "ProfileForm";
             this.Text = "Thông tin cá nhân";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ProfileForm_Paint);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAvatar)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
